@@ -38,12 +38,17 @@ public class MainActivity extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.back:
-                finish();
+                exitApp();
                 break;
             case R.id.zxing:
                 startActivity(new Intent(mAct, ZXingActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        exitApp();
     }
 
 }

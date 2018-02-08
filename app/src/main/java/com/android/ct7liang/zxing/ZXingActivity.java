@@ -43,6 +43,7 @@ public class ZXingActivity extends BaseActivity {
     private int REQUEST_IMAGE = 234;
     private EditText editText;
     private Bitmap mBitmap;
+    private Bitmap logo;
 
     @Override
     public int setLayout() {
@@ -51,7 +52,7 @@ public class ZXingActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        ((TextView)findViewById(R.id.title)).setText("ZXing二维码扫描");
+        ((TextView)findViewById(R.id.title)).setText("zxing二维码扫描");
         findViewById(R.id.back).setOnClickListener(this);
         text = (TextView) findViewById(R.id.text);
         image = (ImageView) findViewById(R.id.image);
@@ -66,7 +67,7 @@ public class ZXingActivity extends BaseActivity {
 
     @Override
     public void initData() {
-
+        logo = BitmapFactory.decodeResource(getResources(), R.mipmap.huaji);
     }
 
     @Override
@@ -122,7 +123,7 @@ public class ZXingActivity extends BaseActivity {
                     ToastUtils.showStatic(mAct, "您的输入为空!");
                     return;
                 }
-                mBitmap = CodeUtils.createImage(content2, 400, 400, BitmapFactory.decodeResource(getResources(), R.mipmap.huaji));
+                mBitmap = CodeUtils.createImage(content2, 400, 400, logo);
                 if (mBitmap ==null){
                     ToastUtils.showStatic(mAct, "生成二维码失败!");
                 }
