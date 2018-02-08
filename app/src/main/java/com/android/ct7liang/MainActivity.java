@@ -1,9 +1,12 @@
 package com.android.ct7liang;
 
+import android.content.Intent;
 import android.view.View;
-import com.ct7liang.tangyuan.BasisActivity;
+import android.widget.TextView;
+import com.android.ct7liang.zxing.ZXingActivity;
 
-public class MainActivity extends BasisActivity {
+
+public class MainActivity extends BaseActivity {
 
     @Override
     public int setLayout() {
@@ -12,7 +15,8 @@ public class MainActivity extends BasisActivity {
 
     @Override
     public void findView() {
-
+        findViewById(R.id.zxing).setOnClickListener(this);
+        findViewById(R.id.back).setOnClickListener(this);
     }
 
     @Override
@@ -22,7 +26,7 @@ public class MainActivity extends BasisActivity {
 
     @Override
     public void initView() {
-
+        ((TextView)findViewById(R.id.title)).setText(getResources().getString(R.string.app_name));
     }
 
     @Override
@@ -31,8 +35,15 @@ public class MainActivity extends BasisActivity {
     }
 
     @Override
-    public void onClick(View view) {
-
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.back:
+                finish();
+                break;
+            case R.id.zxing:
+                startActivity(new Intent(mAct, ZXingActivity.class));
+                break;
+        }
     }
 
 }

@@ -1,1 +1,1 @@
-include ':app', ':tangyuan'
+include ':app'
