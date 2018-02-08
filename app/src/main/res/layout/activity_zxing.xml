@@ -79,6 +79,12 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="生成普通二维码"/>
+            <Button
+                android:id="@+id/save"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:text="保存"/>
         </LinearLayout>
 
     </LinearLayout>

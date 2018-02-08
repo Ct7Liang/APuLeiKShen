@@ -26,7 +26,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.github.Ct7Liang:tangyuan:1.0.0'
+    compile 'com.github.Ct7Liang:tangyuan:1.0.1'
     compile 'cn.yipianfengye.android:zxing-library:2.2'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     testCompile 'junit:junit:4.12'

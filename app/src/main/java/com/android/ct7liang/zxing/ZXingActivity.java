@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -12,10 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.ct7liang.BaseActivity;
+import com.android.ct7liang.BitmapFileUtils;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.AppFolder;
 import com.ct7liang.tangyuan.utils.ToastUtils;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
+
+import java.io.File;
 
 /**
  * ZXing二维码扫描
@@ -37,6 +42,7 @@ public class ZXingActivity extends BaseActivity {
     private int REQUEST_CODE = 123;
     private int REQUEST_IMAGE = 234;
     private EditText editText;
+    private Bitmap mBitmap;
 
     @Override
     public int setLayout() {
@@ -55,6 +61,7 @@ public class ZXingActivity extends BaseActivity {
         findViewById(R.id.create).setOnClickListener(this);
         findViewById(R.id.create_with_logo).setOnClickListener(this);
         findViewById(R.id.my_style_scan).setOnClickListener(this);
+        findViewById(R.id.save).setOnClickListener(this);
     }
 
     @Override
@@ -102,7 +109,7 @@ public class ZXingActivity extends BaseActivity {
                     ToastUtils.showStatic(mAct, "您的输入为空!");
                     return;
                 }
-                Bitmap mBitmap = CodeUtils.createImage(content, 400, 400, null);
+                mBitmap = CodeUtils.createImage(content, 400, 400, null);
                 if (mBitmap==null){
                     ToastUtils.showStatic(mAct, "生成二维码失败!");
                 }
@@ -115,11 +122,24 @@ public class ZXingActivity extends BaseActivity {
                     ToastUtils.showStatic(mAct, "您的输入为空!");
                     return;
                 }
-                Bitmap mBitmap2 = CodeUtils.createImage(content2, 400, 400, BitmapFactory.decodeResource(getResources(), R.mipmap.huaji));
-                if (mBitmap2==null){
+                mBitmap = CodeUtils.createImage(content2, 400, 400, BitmapFactory.decodeResource(getResources(), R.mipmap.huaji));
+                if (mBitmap ==null){
                     ToastUtils.showStatic(mAct, "生成二维码失败!");
                 }
-                image.setImageBitmap(mBitmap2);
+                image.setImageBitmap(mBitmap);
+                break;
+            case R.id.save:
+                if (mBitmap==null){
+                    ToastUtils.showStatic(mAct, "你还没有生成二维码!");
+                    return;
+                }
+                File dir = new File(AppFolder.get().getPath(), "QRCodeImage");
+                if (!dir.exists()){
+                    dir.mkdirs();
+                }
+                File imageFile = new File(dir, SystemClock.currentThreadTimeMillis()+".jpg");
+                BitmapFileUtils.Bitmap2File(mBitmap, imageFile);
+                ToastUtils.showStatic(mAct, "保存成功!  " + imageFile.getAbsolutePath());
                 break;
         }
     }

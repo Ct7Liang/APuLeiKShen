@@ -13,4 +13,5 @@ public abstract class BaseActivity extends BasisActivity {
     protected void setStatusBar() {
         StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
     }
+
 }
