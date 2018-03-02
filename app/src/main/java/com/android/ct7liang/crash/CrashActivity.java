@@ -1,7 +1,6 @@
 package com.android.ct7liang.crash;
 
 import android.view.View;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.BaseApp;
 import com.android.ct7liang.R;

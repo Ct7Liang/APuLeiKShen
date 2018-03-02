@@ -2,7 +2,6 @@ package com.android.ct7liang.crash;
 
 import android.view.View;
 import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 

@@ -1,7 +1,6 @@
 package com.android.ct7liang.utils;
 
 import android.graphics.Bitmap;
-
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -9,8 +8,8 @@ import java.io.IOException;
 
 /**
  * Created by Administrator on 2018-02-08.
+ *
  */
-
 public class BitmapFileUtils {
 
 //    public static Bitmap File2Bitmap(File file){
