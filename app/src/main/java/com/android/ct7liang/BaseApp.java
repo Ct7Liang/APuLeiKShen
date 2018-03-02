@@ -46,17 +46,17 @@ public class BaseApp extends Application {
                 //这阻止了对崩溃的拦截,false表示阻止。用它来禁用customactivityoncrash框架
                 .enabled(true) //default: true
                 //这将隐藏错误活动中的“错误详细信息”按钮，从而隐藏堆栈跟踪。
-                .showErrorDetails(false) //default: true
+                .showErrorDetails(true) //default: true
                 //是否可以重启页面
-                .showRestartButton(false) //default: true
+                .showRestartButton(true) //default: true
                 //错误页面中显示错误详细信息
-                .logErrorOnRestart(false) //default: true
+                .logErrorOnRestart(true) //default: true
                 //错误页面中显示错误详细信息
                 .trackActivities(true) //default: false
                 //定义应用程序崩溃之间的最短时间，以确定我们不在崩溃循环中。比如：在规定的时间内再次崩溃，框架将不处理，让系统处理！
-                .minTimeBetweenCrashesMs(2000); //default: 3000
+                .minTimeBetweenCrashesMs(2000) //default: 3000
                 //崩溃页面显示的图标
-//                .errorDrawable(R.mipmap.ic_launcher)//default: bug image
+                .errorDrawable(R.mipmap.crash_logo);//default: bug image
 //                .restartActivity(MainActivity.class)      //重新启动后的页面
 //                .errorActivity(DefaultErrorActivity.class) //程序崩溃后显示的页面
 //                .eventListener(new CustomEventListener())//设置监听

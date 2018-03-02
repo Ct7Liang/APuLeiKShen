@@ -34,6 +34,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <Button
+                android:id="@+id/fucking"
+                android:text="反人类手机音量调节器"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/taiji"
+                android:text="自定义控件 - 太极"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </ScrollView>

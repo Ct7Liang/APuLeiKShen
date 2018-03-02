@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.ct7liang.crash.CrashActivity;
+import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
+import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 
 public class MainActivity extends BaseActivity {
@@ -19,6 +21,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.back).setOnClickListener(this);
         findViewById(R.id.zxing).setOnClickListener(this);
         findViewById(R.id.crash).setOnClickListener(this);
+        findViewById(R.id.fucking).setOnClickListener(this);
+        findViewById(R.id.taiji).setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +51,12 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.crash:
                 startActivity(new Intent(mAct, CrashActivity.class));
+                break;
+            case R.id.fucking:
+                startActivity(new Intent(mAct, FuckingVolumeActivity.class));
+                break;
+            case R.id.taiji:
+                startActivity(new Intent(mAct, TaiJiActivity.class));
                 break;
         }
     }

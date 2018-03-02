@@ -27,6 +27,7 @@ public class CrashActivity extends BaseActivity {
         findViewById(R.id.a).setOnClickListener(this);
         findViewById(R.id.b).setOnClickListener(this);
         findViewById(R.id.c).setOnClickListener(this);
+        findViewById(R.id.d).setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +55,9 @@ public class CrashActivity extends BaseActivity {
                 BaseApp.builder.errorActivity(DealCrashActivityB.class);
                 break;
             case R.id.c:
+                BaseApp.builder.errorActivity(null);
+                break;
+            case R.id.d:
                 throw new NullPointerException("该异常用于测试崩溃处理模块!");
         }
     }

@@ -29,8 +29,16 @@
     <Button
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="点击崩溃"
+        android:text="清空设置错误Activity"
         android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="点击崩溃"
+        android:id="@+id/d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
