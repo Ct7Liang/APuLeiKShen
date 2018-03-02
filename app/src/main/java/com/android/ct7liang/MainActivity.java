@@ -3,8 +3,9 @@ package com.android.ct7liang;
 import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
-import com.android.ct7liang.zxing.ZXingActivity;
 
+import com.android.ct7liang.crash.CrashActivity;
+import com.android.ct7liang.zxing.ZXingActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -15,8 +16,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.zxing).setOnClickListener(this);
         findViewById(R.id.back).setOnClickListener(this);
+        findViewById(R.id.zxing).setOnClickListener(this);
+        findViewById(R.id.crash).setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.zxing:
                 startActivity(new Intent(mAct, ZXingActivity.class));
+                break;
+            case R.id.crash:
+                startActivity(new Intent(mAct, CrashActivity.class));
                 break;
         }
     }

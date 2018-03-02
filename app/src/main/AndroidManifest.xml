@@ -30,11 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-
+        <activity android:name=".MainActivity" />
         <activity android:name=".zxing.ZXingActivity" />
         <activity android:name=".zxing.MyStyleScanActivity" />
-
+        <activity android:name=".crash.CrashActivity" />
+        <activity android:name=".crash.DealCrashActivityA" />
+        <activity android:name=".crash.DealCrashActivityB"></activity>
     </application>
 
 </manifest>

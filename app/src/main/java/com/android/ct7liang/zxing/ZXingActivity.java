@@ -11,15 +11,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
-import com.android.ct7liang.BitmapFileUtils;
+import com.android.ct7liang.utils.BitmapFileUtils;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.AppFolder;
+import com.ct7liang.tangyuan.utils.LogUtils;
 import com.ct7liang.tangyuan.utils.ToastUtils;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
-
 import java.io.File;
 
 /**
@@ -159,6 +158,7 @@ public class ZXingActivity extends BaseActivity {
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
                     text.setText("二维码内容:  " + result);
+                    LogUtils.write(result);
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
                     text.setText("解析二维码失败");
                 }
@@ -172,6 +172,7 @@ public class ZXingActivity extends BaseActivity {
                     @Override
                     public void onAnalyzeSuccess(Bitmap mBitmap, String result) {
                         text.setText("二维码内容:  " + result);
+                        LogUtils.write(result);
                     }
                     @Override
                     public void onAnalyzeFailed() {

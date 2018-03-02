@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "27.0.0"
     defaultConfig {
         applicationId "com.android.ct7liang"
@@ -24,10 +24,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //二维码扫描 - compile 'cn.yipianfengye.android:zxing-library:2.2' - https://github.com/yipianfengye/android-zxingLibrary
+    //App崩溃处理 - compile 'cat.ereza:customactivityoncrash:2.2.0' - https://github.com/Ereza/CustomActivityOnCrash
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.Ct7Liang:tangyuan:1.0.1'
     compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'cat.ereza:customactivityoncrash:2.2.0'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     testCompile 'junit:junit:4.12'
 }

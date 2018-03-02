@@ -1,4 +1,4 @@
-package com.android.ct7liang;
+package com.android.ct7liang.utils;
 
 import android.graphics.Bitmap;
 
