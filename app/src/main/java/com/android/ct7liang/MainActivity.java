@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.crash).setOnClickListener(this);
         findViewById(R.id.fucking).setOnClickListener(this);
         findViewById(R.id.taiji).setOnClickListener(this);
+        findViewById(R.id.luhn).setOnClickListener(this);
     }
 
     @Override
@@ -57,6 +59,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.taiji:
                 startActivity(new Intent(mAct, TaiJiActivity.class));
+                break;
+            case R.id.luhn:
+                startActivity(new Intent(mAct, CheckBankCardActivity.class));
                 break;
         }
     }

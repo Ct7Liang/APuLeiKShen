@@ -31,17 +31,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <!--二维码扫描-->
+        <!-- 二维码扫描 -->
         <activity android:name=".zxing.ZXingActivity" />
         <activity android:name=".zxing.MyStyleScanActivity" />
-        <!--APP崩溃处理-->
+        <!-- APP崩溃处理 -->
         <activity android:name=".crash.CrashActivity" />
         <activity android:name=".crash.DealCrashActivityA" />
-        <activity android:name=".crash.DealCrashActivityB"/>
-        <!--反人类手机音量调节器-->
-        <activity android:name=".fucking_slide.FuckingVolumeActivity"/>
-        <!--自定义控件 - 太极-->
-        <activity android:name=".taiji.TaiJiActivity"/>
+        <activity android:name=".crash.DealCrashActivityB" />
+        <!-- 反人类手机音量调节器 -->
+        <activity android:name=".fucking_slide.FuckingVolumeActivity" />
+        <!-- 自定义控件 - 太极 -->
+        <activity android:name=".taiji.TaiJiActivity" />
+        <activity android:name=".bank_card.CheckBankCardActivity"/>
+
+        <!-- 查看大图(String) -->
+        <activity android:name=".QueryImageActivity"/>
+        <!-- 查看大图(Integer) -->
+        <activity android:name=".QueryImageResourceActivity"/>
+
     </application>
 
 </manifest>

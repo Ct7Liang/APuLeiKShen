@@ -46,6 +46,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <Button
+                android:id="@+id/luhn"
+                android:text="基于Luhn算法的银行卡卡号的格式校验"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </ScrollView>
