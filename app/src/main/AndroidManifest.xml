@@ -42,13 +42,13 @@
         <activity android:name=".fucking_slide.FuckingVolumeActivity" />
         <!-- 自定义控件 - 太极 -->
         <activity android:name=".taiji.TaiJiActivity" />
-        <activity android:name=".bank_card.CheckBankCardActivity"/>
+        <activity android:name=".bank_card.CheckBankCardActivity" />
 
         <!-- 查看大图(String) -->
-        <activity android:name=".QueryImageActivity"/>
+        <activity android:name=".QueryImageActivity" />
         <!-- 查看大图(Integer) -->
-        <activity android:name=".QueryImageResourceActivity"/>
-
+        <activity android:name=".QueryImageResourceActivity" />
+        <activity android:name=".imageView_scaleType.ImageViewScaleTypeActivity"></activity>
     </application>
 
 </manifest>

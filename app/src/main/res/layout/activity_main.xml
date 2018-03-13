@@ -52,6 +52,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <Button
+                android:id="@+id/scale_type"
+                android:text="ImageView的ScaleType属性"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </ScrollView>

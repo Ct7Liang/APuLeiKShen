@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
+import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 
@@ -25,6 +26,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.fucking).setOnClickListener(this);
         findViewById(R.id.taiji).setOnClickListener(this);
         findViewById(R.id.luhn).setOnClickListener(this);
+        findViewById(R.id.scale_type).setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +64,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.luhn:
                 startActivity(new Intent(mAct, CheckBankCardActivity.class));
+                break;
+            case R.id.scale_type:
+                startActivity(new Intent(mAct, ImageViewScaleTypeActivity.class));
                 break;
         }
     }
