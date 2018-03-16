@@ -48,7 +48,8 @@
         <activity android:name=".QueryImageActivity" />
         <!-- 查看大图(Integer) -->
         <activity android:name=".QueryImageResourceActivity" />
-        <activity android:name=".imageView_scaleType.ImageViewScaleTypeActivity"></activity>
+        <activity android:name=".imageView_scaleType.ImageViewScaleTypeActivity" />
+        <activity android:name=".loading.LoadingActivity"></activity>
     </application>
 
 </manifest>

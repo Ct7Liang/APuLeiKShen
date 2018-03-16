@@ -21,6 +21,7 @@ android {
 
 
 
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -38,5 +39,6 @@ dependencies {
     compile 'com.jaeger.statusbarutil:library:1.4.0'
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     compile 'com.zaaach:toprightmenu:1.1.2'
+    compile 'com.tuyenmonkey:mkloader:1.4.0'
     testCompile 'junit:junit:4.12'
 }
