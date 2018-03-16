@@ -8,7 +8,7 @@ public class LoadingActivity extends BaseActivity {
 
     @Override
     public int setLayout() {
-        return R.layout.activity_loading;
+        return R.layout.activity_loading_a;
     }
 
     @Override
