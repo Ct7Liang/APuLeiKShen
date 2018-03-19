@@ -1,7 +1,6 @@
 package com.android.ct7liang;
 
 import android.content.pm.ActivityInfo;
-
 import com.ct7liang.tangyuan.BasisActivity;
 import com.jaeger.library.StatusBarUtil;
 

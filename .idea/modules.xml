@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/APuLeiKShen.iml" filepath="$PROJECT_DIR$/APuLeiKShen.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/fucking_volume_slider/fucking_volume_slider.iml" filepath="$PROJECT_DIR$/fucking_volume_slider/fucking_volume_slider.iml" />
     </modules>

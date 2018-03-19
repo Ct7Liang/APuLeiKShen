@@ -23,7 +23,9 @@
         android:roundIcon="@mipmap/emoticon13"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
