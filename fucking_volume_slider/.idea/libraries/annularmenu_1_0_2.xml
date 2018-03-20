@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="annularmenu-1.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/41df7d154c619f39cb77f367b4be7a29420be549/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/41df7d154c619f39cb77f367b4be7a29420be549/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dingmouren.annularmenu/annularmenu/1.0.2/28e3b8669fb9be33ed55f1290f51297184da1a3c/annularmenu-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
