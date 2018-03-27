@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.luhn).setOnClickListener(this);
         findViewById(R.id.scale_type).setOnClickListener(this);
         findViewById(R.id.loading).setOnClickListener(this);
+        findViewById(R.id.address_select).setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +74,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.loading:
                 startActivity(new Intent(mAct, LoadingActivity.class));
+                break;
+            case R.id.address_select:
+                startActivity(new Intent(mAct, AddressSelectActivity.class));
                 break;
         }
     }

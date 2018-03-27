@@ -51,7 +51,8 @@
         <!-- 查看大图(Integer) -->
         <activity android:name=".QueryImageResourceActivity" />
         <activity android:name=".imageView_scaleType.ImageViewScaleTypeActivity" />
-        <activity android:name=".loading.LoadingActivity"/>
+        <activity android:name=".loading.LoadingActivity" />
+        <activity android:name=".address_select.AddressSelectActivity"></activity>
     </application>
 
 </manifest>

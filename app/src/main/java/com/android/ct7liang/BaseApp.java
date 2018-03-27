@@ -2,11 +2,13 @@ package com.android.ct7liang;
 
 import android.app.Application;
 
+import com.ct7liang.address.Regional;
 import com.ct7liang.tangyuan.AppFolder;
 import com.ct7liang.tangyuan.utils.LogUtils;
 import com.ct7liang.tangyuan.utils.SpUtils;
 import com.ct7liang.tangyuan.utils.ToastUtils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
+
 import cat.ereza.customactivityoncrash.CustomActivityOnCrash;
 import cat.ereza.customactivityoncrash.config.CaocConfig;
 
@@ -32,7 +34,12 @@ public class BaseApp extends Application {
 
         initCrash();
         initZxing();
+        initAddressSelect();
 
+    }
+
+    private void initAddressSelect() {
+        Regional.init(this, "com.android.ct7liang", "#FFFFFF", "#373954", "#373954", "#B0B0B0", "#B0B0B0", "ct7");
     }
 
     private void initCrash() {

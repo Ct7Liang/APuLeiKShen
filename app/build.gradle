@@ -22,6 +22,7 @@ android {
 
 
 
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -34,6 +35,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.Ct7Liang:tangyuan:1.0.6'
+    compile 'com.github.Ct7Liang:Regional:1.0.3'
     compile 'cn.yipianfengye.android:zxing-library:2.2'
     compile 'cat.ereza:customactivityoncrash:2.2.0'
     compile 'com.jaeger.statusbarutil:library:1.4.0'
