@@ -69,6 +69,12 @@
                 android:text="地址选择三级联动"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/danmu"
+                android:text="BiliBili弹幕"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>

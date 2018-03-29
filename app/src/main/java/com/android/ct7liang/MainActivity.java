@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
+import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
@@ -31,12 +32,11 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.scale_type).setOnClickListener(this);
         findViewById(R.id.loading).setOnClickListener(this);
         findViewById(R.id.address_select).setOnClickListener(this);
+        findViewById(R.id.danmu).setOnClickListener(this);
     }
 
     @Override
-    public void initData() {
-
-    }
+    public void initData() {}
 
     @Override
     public void initView() {
@@ -44,9 +44,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void initFinish() {
-
-    }
+    public void initFinish() {}
 
     @Override
     public void onClick(View v) {
@@ -77,6 +75,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.address_select:
                 startActivity(new Intent(mAct, AddressSelectActivity.class));
+                break;
+            case R.id.danmu:
+                startActivity(new Intent(mAct, BiliBiliDanmuActivity.class));
                 break;
         }
     }
