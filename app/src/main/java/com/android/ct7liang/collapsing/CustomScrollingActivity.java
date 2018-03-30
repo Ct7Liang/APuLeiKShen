@@ -25,7 +25,11 @@ public class CustomScrollingActivity extends AppCompatActivity implements View.O
         setContentView(R.layout.activity_custom_scrolling);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
+//        StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
+//        StatusBarUtil.setTranslucent(this, 0);
+//        StatusBarUtil.setTransparent(this);
+        StatusBarUtil.setTranslucentForCoordinatorLayout(this, 18);
+
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,21 +55,17 @@ public class CustomScrollingActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
-        }
+
     }
 
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
         if (verticalOffset == 0) {  //展开
-            collapsingToolbarLayout.setTitle("再见");
+            collapsingToolbarLayout.setTitle("蒹葭");
         } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {  //闭合
             collapsingToolbarLayout.setTitle("");
         } else { //中间态
-            collapsingToolbarLayout.setTitle("再见");
+            collapsingToolbarLayout.setTitle("蒹葭");
         }
     }
 }
