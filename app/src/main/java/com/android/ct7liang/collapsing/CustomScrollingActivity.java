@@ -9,12 +9,15 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
 
 import com.android.ct7liang.R;
 import com.jaeger.library.StatusBarUtil;
 
-public class CustomScrollingActivity extends AppCompatActivity implements View.OnClickListener {
+public class CustomScrollingActivity extends AppCompatActivity implements View.OnClickListener, AppBarLayout.OnOffsetChangedListener {
+
+    private Toolbar toolbar;
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    private AppBarLayout appBarLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,33 +27,18 @@ public class CustomScrollingActivity extends AppCompatActivity implements View.O
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("再见");
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("蒹葭");
 
-        ((TextView)findViewById(R.id.title)).setText("一千个伤心的理由");
-        findViewById(R.id.back).setOnClickListener(this);
-        final View view = findViewById(R.id.title_bar);
+        collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
 
-        final CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.toolbar_layout);
+        appBarLayout = (AppBarLayout)findViewById(R.id.app_bar);
+        appBarLayout.addOnOffsetChangedListener(this);
 
-
-        AppBarLayout app_bar=(AppBarLayout)findViewById(R.id.app_bar);
-        app_bar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (verticalOffset == 0) {
-                    view.setVisibility(View.GONE);
-                    collapsingToolbarLayout.setTitle("再见");//设置title为EXPANDED
-                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-                    collapsingToolbarLayout.setTitle("");//设置title不显示
-                    view.setVisibility(View.VISIBLE);
-                } else {
-                    collapsingToolbarLayout.setTitle("再见");//设置title为INTERNEDIATE
-                    view.setVisibility(View.GONE);
-                }
-            }
-        });
+//        ((TextView)findViewById(R.id.title)).setText("一千个伤心的理由");
+//        findViewById(R.id.back).setOnClickListener(this);
+//        final View view = findViewById(R.id.title_bar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +55,17 @@ public class CustomScrollingActivity extends AppCompatActivity implements View.O
             case R.id.back:
                 finish();
                 break;
+        }
+    }
+
+    @Override
+    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+        if (verticalOffset == 0) {  //展开
+            collapsingToolbarLayout.setTitle("再见");
+        } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {  //闭合
+            collapsingToolbarLayout.setTitle("");
+        } else { //中间态
+            collapsingToolbarLayout.setTitle("再见");
         }
     }
 }
