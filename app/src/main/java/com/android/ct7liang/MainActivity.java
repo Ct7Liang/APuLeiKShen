@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
+import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
@@ -33,6 +34,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.loading).setOnClickListener(this);
         findViewById(R.id.address_select).setOnClickListener(this);
         findViewById(R.id.danmu).setOnClickListener(this);
+        findViewById(R.id.scroll).setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +80,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.danmu:
                 startActivity(new Intent(mAct, BiliBiliDanmuActivity.class));
+                break;
+            case R.id.scroll:
+        startActivity(new Intent(mAct, ScrollTypeActivity.class));
                 break;
         }
     }

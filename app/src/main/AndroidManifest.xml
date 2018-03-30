@@ -54,7 +54,20 @@
         <activity android:name=".loading.LoadingActivity" />
         <activity android:name=".address_select.AddressSelectActivity" />
         <activity android:name=".bilibili_danmu.BiliBiliDanmuActivity" />
-        <activity android:name=".bilibili_danmu.MyDanmuActivity"></activity>
+        <activity android:name=".bilibili_danmu.MyDanmuActivity" />
+        <activity
+            android:name=".collapsing.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".collapsing.ScrollTypeActivity" />
+        <activity
+            android:name=".collapsing.CustomScrollingActivity"
+            android:label="@string/title_activity_custom_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".collapsing.Scrolling01Activity"
+            android:label="@string/title_activity_scrolling01"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
