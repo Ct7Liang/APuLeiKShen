@@ -67,7 +67,8 @@
         <activity
             android:name=".collapsing.Scrolling01Activity"
             android:label="@string/title_activity_scrolling01"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".switch_button.SwitchButtonActivity"/>
     </application>
 
 </manifest>
