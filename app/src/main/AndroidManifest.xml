@@ -44,17 +44,22 @@
         <activity android:name=".fucking_slide.FuckingVolumeActivity" />
         <!-- 自定义控件 - 太极 -->
         <activity android:name=".taiji.TaiJiActivity" />
+        <!-- 银行卡卡号校验 -->
         <activity android:name=".bank_card.CheckBankCardActivity" />
-
         <!-- 查看大图(String) -->
         <activity android:name=".QueryImageActivity" />
         <!-- 查看大图(Integer) -->
         <activity android:name=".QueryImageResourceActivity" />
+        <!-- ImageView Scale属性 -->
         <activity android:name=".imageView_scaleType.ImageViewScaleTypeActivity" />
+        <!-- 加载效果 -->
         <activity android:name=".loading.LoadingActivity" />
+        <!-- 自定义地址选择三级联动 -->
         <activity android:name=".address_select.AddressSelectActivity" />
+        <!-- BiliBili弹幕 -->
         <activity android:name=".bilibili_danmu.BiliBiliDanmuActivity" />
         <activity android:name=".bilibili_danmu.MyDanmuActivity" />
+        <!-- 可折叠标题栏 -->
         <activity
             android:name=".collapsing.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
@@ -68,7 +73,9 @@
             android:name=".collapsing.Scrolling01Activity"
             android:label="@string/title_activity_scrolling01"
             android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 选择按钮 -->
         <activity android:name=".switch_button.SwitchButtonActivity" />
+        <!-- 沉浸式状态栏 -->
         <activity android:name=".status_bar.StatusBarCategoryActivity" />
         <activity android:name=".status_bar.StatusBarAActivity" />
         <activity android:name=".status_bar.StatusBarBActivity" />
@@ -81,7 +88,7 @@
         <activity
             android:name=".status_bar.StatusBarFActivity"
             android:label="@string/title_activity_status_bar_f"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
