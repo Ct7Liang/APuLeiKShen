@@ -68,7 +68,20 @@
             android:name=".collapsing.Scrolling01Activity"
             android:label="@string/title_activity_scrolling01"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".switch_button.SwitchButtonActivity"/>
+        <activity android:name=".switch_button.SwitchButtonActivity" />
+        <activity android:name=".status_bar.StatusBarCategoryActivity" />
+        <activity android:name=".status_bar.StatusBarAActivity" />
+        <activity android:name=".status_bar.StatusBarBActivity" />
+        <activity android:name=".status_bar.StatusBarCActivity" />
+        <activity android:name=".status_bar.StatusBarDActivity" />
+        <activity
+            android:name=".status_bar.StatusBarEActivity"
+            android:label="@string/title_activity_status_bar_e"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".status_bar.StatusBarFActivity"
+            android:label="@string/title_activity_status_bar_f"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
+import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
@@ -37,6 +38,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.danmu).setOnClickListener(this);
         findViewById(R.id.scroll).setOnClickListener(this);
         findViewById(R.id.switch_button).setOnClickListener(this);
+        findViewById(R.id.status_bar).setOnClickListener(this);
     }
 
     @Override
@@ -88,6 +90,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.switch_button:
                 startActivity(new Intent(mAct, SwitchButtonActivity.class));
+                break;
+            case R.id.status_bar:
+                startActivity(new Intent(mAct, StatusBarCategoryActivity.class));
                 break;
         }
     }
