@@ -88,7 +88,8 @@
         <activity
             android:name=".status_bar.StatusBarFActivity"
             android:label="@string/title_activity_status_bar_f"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".blur.BlurAActivity"></activity>
     </application>
 
 </manifest>

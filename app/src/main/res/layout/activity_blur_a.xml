@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.ct7liang.blur.BlurAActivity">
+
+    <ImageView
+        android:src="@mipmap/img_02"
+        android:id="@+id/image"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/title_bar_left"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:hint="radius"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff"
+                android:id="@+id/number_a"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"/>
+            <EditText
+                android:hint="sampling"
+                android:textColorHint="#ffffff"
+                android:textColor="#ffffff"
+                android:id="@+id/number_b"
+                android:inputType="number"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"/>
+            <Button
+                android:id="@+id/blur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模糊"/>
+            <Button
+                android:id="@+id/resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还原"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

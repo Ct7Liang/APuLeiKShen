@@ -93,6 +93,12 @@
                 android:text="沉浸式状态栏"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/image_blur"
+                android:text="图片模糊"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </ScrollView>

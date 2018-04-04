@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
+import com.android.ct7liang.blur.BlurAActivity;
 import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
@@ -39,6 +40,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.scroll).setOnClickListener(this);
         findViewById(R.id.switch_button).setOnClickListener(this);
         findViewById(R.id.status_bar).setOnClickListener(this);
+        findViewById(R.id.image_blur).setOnClickListener(this);
     }
 
     @Override
@@ -93,6 +95,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.status_bar:
                 startActivity(new Intent(mAct, StatusBarCategoryActivity.class));
+                break;
+            case R.id.image_blur:
+                startActivity(new Intent(mAct, BlurAActivity.class));
                 break;
         }
     }
