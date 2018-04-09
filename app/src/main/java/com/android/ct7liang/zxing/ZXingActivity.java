@@ -5,20 +5,21 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.android.ct7liang.BaseActivity;
-import com.android.ct7liang.utils.BitmapFileUtils;
 import com.android.ct7liang.R;
+import com.android.ct7liang.utils.BitmapFileUtils;
 import com.ct7liang.tangyuan.AppFolder;
 import com.ct7liang.tangyuan.utils.LogUtils;
 import com.ct7liang.tangyuan.utils.ToastUtils;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
+
 import java.io.File;
 
 /**
@@ -137,7 +138,7 @@ public class ZXingActivity extends BaseActivity {
                 if (!dir.exists()){
                     dir.mkdirs();
                 }
-                File imageFile = new File(dir, SystemClock.currentThreadTimeMillis()+".jpg");
+                File imageFile = new File(dir, System.currentTimeMillis()+".jpg");
                 BitmapFileUtils.Bitmap2File(mBitmap, imageFile);
                 ToastUtils.showStatic(mAct, "保存成功!  " + imageFile.getAbsolutePath());
                 break;

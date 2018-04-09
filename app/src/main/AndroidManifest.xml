@@ -89,7 +89,13 @@
             android:name=".status_bar.StatusBarFActivity"
             android:label="@string/title_activity_status_bar_f"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".blur.BlurAActivity"></activity>
+        <activity android:name=".blur.BlurAActivity" />
+        <activity android:name=".login_page.LoginCategoryActivity" />
+        <activity android:name=".login_page.LoginAActivity" />
+        <activity android:name=".login_page.LoginBActivity" />
+        <activity android:name=".login_page.LoginCActivity" />
+        <activity android:name=".login_page.LoginDActivity" />
+        <activity android:name=".login_page.LoginEActivity"></activity>
     </application>
 
 </manifest>

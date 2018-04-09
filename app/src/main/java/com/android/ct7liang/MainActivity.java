@@ -13,6 +13,7 @@ import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
+import com.android.ct7liang.login_page.LoginCategoryActivity;
 import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
@@ -41,6 +42,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.switch_button).setOnClickListener(this);
         findViewById(R.id.status_bar).setOnClickListener(this);
         findViewById(R.id.image_blur).setOnClickListener(this);
+        findViewById(R.id.login_page).setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +100,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.image_blur:
                 startActivity(new Intent(mAct, BlurAActivity.class));
+                break;
+            case R.id.login_page:
+                startActivity(new Intent(mAct, LoginCategoryActivity.class));
                 break;
         }
     }
