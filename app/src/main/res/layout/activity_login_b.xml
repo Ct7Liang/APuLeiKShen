@@ -51,7 +51,8 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:textCursorDrawable="@drawable/login_edit_cursor_shape_a"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
@@ -65,7 +66,8 @@
             android:hint="密码"
             android:textColorHint="#FFFFFF"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:textCursorDrawable="@drawable/login_edit_cursor_shape_a"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="0.6dp"
