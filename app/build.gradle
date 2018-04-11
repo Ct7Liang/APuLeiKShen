@@ -20,30 +20,44 @@ android {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //二维码扫描 - compile 'cn.yipianfengye.android:zxing-library:2.2' - https://github.com/yipianfengye/android-zxingLibrary
-    //App崩溃处理 - compile 'cat.ereza:customactivityoncrash:2.2.0' - https://github.com/Ereza/CustomActivityOnCrash
-    //仿手机QQ界面右上角的弹出菜单 - compile 'com.zaaach:toprightmenu:1.1.2' - https://github.com/zaaach/TopRightMenu
-    //BiliBili弹幕 compile - 'com.github.ctiao:DanmakuFlameMaster:0.9.25' compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21' compile 'com.github.ctiao:ndkbitmap-armv5:0.9.21' compile 'com.github.ctiao:ndkbitmap-x86:0.9.21' - https://github.com/Bilibili/DanmakuFlameMaster
-    //SwitchButton compile - 'com.github.zcweng:switch-button:0.0.3@aar' - https://github.com/zcweng/SwitchButton
+    /**
+     *  二维码扫描
+     *  compile 'cn.yipianfengye.android:zxing-library:2.2'
+     *  https://github.com/yipianfengye/android-zxingLibrary
+     *
+     *  App崩溃处理
+     *  compile 'cat.ereza:customactivityoncrash:2.2.0'
+     *  https://github.com/Ereza/CustomActivityOnCrash
+     *
+     *  仿手机QQ界面右上角的弹出菜单
+     *  compile 'com.zaaach:toprightmenu:1.1.2'
+     *  https://github.com/zaaach/TopRightMenu
+     *
+     *  优美又流畅的自定义加载视图
+     *  compile 'com.tuyenmonkey:mkloader:1.4.0'
+     *  https://github.com/nntuyen/mkloader
+     *
+     *  BiliBili弹幕
+     *  compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+     *  compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+     *  compile 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
+     *  compile 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+     *  https://github.com/Bilibili/DanmakuFlameMaster
+     *
+     *  SwitchButton
+     *  compile 'com.github.zcweng:switch-button:0.0.3@aar'
+     *  https://github.com/zcweng/SwitchButton
+     *
+     *  图片模糊
+     *  compile 'jp.wasabeef:blurry:2.1.1'
+     *  https://github.com/wasabeef/Blurry
+     */
+
     compile project(':fucking_volume_slider')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:26.+'
