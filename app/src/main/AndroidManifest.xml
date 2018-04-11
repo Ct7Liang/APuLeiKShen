@@ -5,10 +5,8 @@
     <!-- zxing二维码扫描 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -89,13 +87,15 @@
             android:name=".status_bar.StatusBarFActivity"
             android:label="@string/title_activity_status_bar_f"
             android:theme="@style/AppTheme.NoActionBar" />
+        <!-- 图片模糊 -->
         <activity android:name=".blur.BlurAActivity" />
+        <!-- 登录界面 -->
         <activity android:name=".login_page.LoginCategoryActivity" />
         <activity android:name=".login_page.LoginAActivity" />
         <activity android:name=".login_page.LoginBActivity" />
         <activity android:name=".login_page.LoginCActivity" />
         <activity android:name=".login_page.LoginDActivity" />
-        <activity android:name=".login_page.LoginEActivity"></activity>
+        <activity android:name=".login_page.LoginEActivity" />
     </application>
 
 </manifest>
