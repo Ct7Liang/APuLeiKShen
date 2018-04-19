@@ -17,6 +17,8 @@ public class SimpleCircleButtonActivity extends BaseActivity {
         return R.layout.activity_simple_circle_button;
     }
 
+
+
     @Override
     public void findView() {
         //查找控件
