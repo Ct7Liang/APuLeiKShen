@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.ct7liang.menu.boomMenu.BoomMenuActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@+id/simple_circle_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simple_Circle_Button" />
+
+            <Button
+                android:id="@+id/inside_circle_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text_Inside_Circle_Button"
+                />
+
+            <Button
+                android:id="@+id/outside_circle_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="outside_circle_button"
+                />
+
+            <Button
+                android:id="@+id/ham_button_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/square_and_piece_corner_radius_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/boom_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/button_place_alignment_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/order_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/actionbar_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/tool_bar_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/draggable_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/ease_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/listener_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/control_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/share_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/list_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/recycler_view_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/fragment_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/change_boom_button_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/three_d_animation_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/custom_position_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/fade_views_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+            <Button
+                android:id="@+id/orientation_example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+    
+</RelativeLayout>

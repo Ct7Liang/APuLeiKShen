@@ -20,6 +20,11 @@ android {
 }
 
 
+
+
+
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -59,6 +64,7 @@ dependencies {
      */
 
     compile project(':fucking_volume_slider')
+    //    compile 'com.nightonke:boommenu:2.1.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -76,5 +82,6 @@ dependencies {
     compile 'com.github.ctiao:ndkbitmap-x86:0.9.21'
     compile 'com.github.zcweng:switch-button:0.0.3@aar'
     compile 'jp.wasabeef:blurry:2.1.1'
+    compile 'com.github.Nightonke:BoomMenu:e20b5ea52d'
     testCompile 'junit:junit:4.12'
 }
