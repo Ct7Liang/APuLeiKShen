@@ -25,6 +25,8 @@ android {
 
 
 
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -61,6 +63,10 @@ dependencies {
      *  图片模糊
      *  compile 'jp.wasabeef:blurry:2.1.1'
      *  https://github.com/wasabeef/Blurry
+     *
+     *  带有弹出效果的悬浮菜单
+     *  com.github.Nightonke:BoomMenu:e20b5ea52d
+     *  https://github.com/Nightonke/BoomMenu
      */
 
     compile project(':fucking_volume_slider')

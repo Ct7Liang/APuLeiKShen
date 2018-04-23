@@ -22,34 +22,34 @@
                 android:id="@+id/simple_circle_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Simple_Circle_Button" />
+                android:text="普通圆形的菜单选项" />
 
             <Button
                 android:id="@+id/inside_circle_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Text_Inside_Circle_Button"
+                android:text="内部标题的菜单选项"
                 />
 
             <Button
                 android:id="@+id/outside_circle_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="outside_circle_button"
+                android:text="外部标题的菜单选项"
                 />
 
             <Button
-                android:id="@+id/ham_button_example"
+                android:id="@+id/ham_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="横向的菜单按钮"
                 />
 
             <Button
-                android:id="@+id/square_and_piece_corner_radius_example"
+                android:id="@+id/square_and_piece_corner_radius"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="可设置圆角弧度的方形菜单选项"
                 />
 
             <Button

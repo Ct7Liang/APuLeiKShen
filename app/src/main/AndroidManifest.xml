@@ -102,7 +102,9 @@
         <activity android:name=".menu.boomMenu.BoomMenuActivity" />
         <activity android:name=".menu.boomMenu.SimpleCircleButtonActivity" />
         <activity android:name=".menu.boomMenu.TextInsideCircleButtonActivity" />
-        <activity android:name=".menu.boomMenu.TextOutSideCircleButtonActivity"></activity>
+        <activity android:name=".menu.boomMenu.TextOutSideCircleButtonActivity" />
+        <activity android:name=".menu.boomMenu.HamButtonActivity" />
+        <activity android:name=".menu.boomMenu.SquarePieceCornerRadiusActivity"></activity>
     </application>
 
 </manifest>

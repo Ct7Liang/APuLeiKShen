@@ -37,13 +37,13 @@ public class TextOutSideCircleButtonActivity extends BaseActivity {
         //注: 按钮上面小点的排列样式和菜单选项的排列样式 里面第一个数字必须相同 即菜单选项和按钮上小点的个数必须相同
 
         for (int i = 0; i < boomMenuButton.getPiecePlaceEnum().pieceNumber(); i++) {
-            //根据菜单选项的数目 添加相同数量的builder 设置图标 设置文字
+            //根据菜单选项的数目 添加相同数量的builder 设置图标 设置文字 以及文字颜色
             if (i==0){
-                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalImageRes(R.mipmap.huaji).normalText("这是第"+i+"个").normalTextColor(Color.parseColor("#000000")));
+                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalImageRes(R.mipmap.huaji).normalText("this is a 这是第"+i+"个").normalTextColor(Color.parseColor("#000000")));
             }else if (i==1){
-                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalImageRes(R.mipmap.huaji).normalText("这是第"+i+"个"));
+                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalImageRes(R.mipmap.huaji).normalText("this is a 这是第"+i+"个"));
             }else{
-                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalText("这是第"+i+"个"));
+                boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalText("this is a 这是第"+i+"个"));
             }
         }
     }

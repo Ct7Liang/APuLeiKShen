@@ -18,6 +18,8 @@ public class BoomMenuActivity extends BaseActivity {
         findViewById(R.id.simple_circle_button).setOnClickListener(this);
         findViewById(R.id.inside_circle_button).setOnClickListener(this);
         findViewById(R.id.outside_circle_button).setOnClickListener(this);
+        findViewById(R.id.ham_button).setOnClickListener(this);
+        findViewById(R.id.square_and_piece_corner_radius).setOnClickListener(this);
     }
 
     @Override
@@ -31,6 +33,12 @@ public class BoomMenuActivity extends BaseActivity {
                 break;
             case R.id.outside_circle_button:
                 startActivity(new Intent(this, TextOutSideCircleButtonActivity.class));
+                break;
+            case R.id.ham_button:
+                startActivity(new Intent(this, HamButtonActivity.class));
+                break;
+            case R.id.square_and_piece_corner_radius:
+                startActivity(new Intent(this, SquarePieceCornerRadiusActivity.class));
                 break;
         }
     }
