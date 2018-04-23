@@ -8,6 +8,7 @@ import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
 import com.android.ct7liang.blur.BlurAActivity;
+import com.android.ct7liang.change_icon.ChangeLogoActivity;
 import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.image_blur).setOnClickListener(this);
         findViewById(R.id.login_page).setOnClickListener(this);
         findViewById(R.id.menu).setOnClickListener(this);
+        findViewById(R.id.changeIcon).setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +110,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.menu:
                 startActivity(new Intent(mAct, MenuActivity.class));
+                break;
+            case R.id.changeIcon:
+                startActivity(new Intent(mAct, ChangeLogoActivity.class));
                 break;
         }
     }
