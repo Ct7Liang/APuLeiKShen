@@ -41,6 +41,7 @@ public class SoftActivity extends BaseActivity {
     @Override
     public void initFinish() {
 
+
     }
 
     @Override
