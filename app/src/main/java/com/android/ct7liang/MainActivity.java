@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.login_page).setOnClickListener(this);
         findViewById(R.id.menu).setOnClickListener(this);
         findViewById(R.id.changeIcon).setOnClickListener(this);
+        findViewById(R.id.edit_text_soft_input).setOnClickListener(this);
     }
 
     @Override
@@ -113,6 +115,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.changeIcon:
                 startActivity(new Intent(mAct, ChangeLogoActivity.class));
+                break;
+            case R.id.edit_text_soft_input:
+                startActivity(new Intent(mAct, SoftActivity.class));
                 break;
         }
     }
