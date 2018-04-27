@@ -23,7 +23,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.SplashActivity"></activity>
+            android:theme="@style/Theme.SplashActivity" />
 
         <activity-alias
             android:name=".icon"
@@ -193,7 +193,9 @@
         <activity android:name=".menu.boomMenu.HamButtonActivity" />
         <activity android:name=".menu.boomMenu.SquarePieceCornerRadiusActivity" />
         <activity android:name=".change_icon.ChangeLogoActivity" />
-        <activity android:name=".soft_broad_case.SoftActivity"></activity>
+        <activity android:name=".soft_broad_case.SoftActivity" />
+        <activity android:name=".menu.ContextMenu.ContextMenuActivity" />
+        <activity android:name=".view_flipper.ViewFlipperActivity"></activity>
     </application>
 
 </manifest>

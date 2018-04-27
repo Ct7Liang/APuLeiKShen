@@ -62,6 +62,10 @@ dependencies {
      *  带有弹出效果的悬浮菜单
      *  com.github.Nightonke:BoomMenu:e20b5ea52d
      *  https://github.com/Nightonke/BoomMenu
+     *
+     *  ContextMenu
+     *  com.yalantis:contextmenu:1.0.7
+     *  https://github.com/Yalantis/Context-Menu.Android
      */
 
     compile project(':fucking_volume_slider')
@@ -84,5 +88,6 @@ dependencies {
     compile 'com.github.zcweng:switch-button:0.0.3@aar'
     compile 'jp.wasabeef:blurry:2.1.1'
     compile 'com.github.Nightonke:BoomMenu:e20b5ea52d'
+    compile 'com.yalantis:contextmenu:1.0.7'
     testCompile 'junit:junit:4.12'
 }

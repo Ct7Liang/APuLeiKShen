@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
@@ -17,9 +16,11 @@ import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
 import com.android.ct7liang.login_page.LoginCategoryActivity;
 import com.android.ct7liang.menu.MenuActivity;
+import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
+import com.android.ct7liang.view_flipper.ViewFlipperActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 
 public class MainActivity extends BaseActivity {
@@ -49,6 +50,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.menu).setOnClickListener(this);
         findViewById(R.id.changeIcon).setOnClickListener(this);
         findViewById(R.id.edit_text_soft_input).setOnClickListener(this);
+        findViewById(R.id.filpper).setOnClickListener(this);
     }
 
     @Override
@@ -118,6 +120,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.edit_text_soft_input:
                 startActivity(new Intent(mAct, SoftActivity.class));
+                break;
+            case R.id.filpper:
+                startActivity(new Intent(mAct, ViewFlipperActivity.class));
                 break;
         }
     }
