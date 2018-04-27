@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.android.ct7liang.view_flipper.ViewFlipperActivity">
 
-    <ViewFlipper
-        android:layout_centerInParent="true"
-        android:id="@+id/filpper"
+    <include layout="@layout/title_bar_center"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autoStart="true"
-        android:flipInterval="2000"
-        android:inAnimation="@anim/anim_filpper_come_in"
-        android:outAnimation="@anim/anim_filpper_get_out"/>
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+        <ViewFlipper
+            android:id="@+id/filpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@anim/anim_filpper_come_in"
+            android:outAnimation="@anim/anim_filpper_get_out"/>
+    </LinearLayout>
 
-</RelativeLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/btn_oc"
+        android:text="开启/关闭滚动"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
