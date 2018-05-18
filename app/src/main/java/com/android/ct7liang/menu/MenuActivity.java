@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.android.ct7liang.menu.ContextMenu.ContextMenuActivity;
+import com.android.ct7liang.menu.contextMenu.ContextMenuActivity;
 import com.android.ct7liang.menu.boomMenu.BoomMenuActivity;
 
 public class MenuActivity extends BaseActivity {

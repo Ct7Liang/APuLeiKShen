@@ -1,4 +1,4 @@
-package com.android.ct7liang.menu.ContextMenu;
+package com.android.ct7liang.menu.contextMenu;
 
 import android.graphics.Color;
 import android.text.TextUtils;

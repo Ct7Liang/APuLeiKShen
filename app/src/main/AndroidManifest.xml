@@ -192,10 +192,14 @@
         <activity android:name=".menu.boomMenu.TextOutSideCircleButtonActivity" />
         <activity android:name=".menu.boomMenu.HamButtonActivity" />
         <activity android:name=".menu.boomMenu.SquarePieceCornerRadiusActivity" />
+        <activity android:name=".menu.contextMenu.ContextMenuActivity" />
         <activity android:name=".change_icon.ChangeLogoActivity" />
         <activity android:name=".soft_broad_case.SoftActivity" />
-        <activity android:name=".menu.ContextMenu.ContextMenuActivity" />
-        <activity android:name=".view_flipper.ViewFlipperActivity"></activity>
+        <activity android:name=".view_flipper.ViewFlipperActivity" />
+        <activity
+            android:name=".activityTime.ActivityTime"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
     </application>
 
 </manifest>

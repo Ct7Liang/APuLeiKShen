@@ -27,9 +27,9 @@ public class BaseApp extends Application {
 
         SpUtils.init(this);//初始化SharedPreferences
         ToastUtils.setIsShowTestEnable(true); //是否显示用于测试的Toast 默认为true
-        LogUtils.setTag("TAG");
+        LogUtils.setTag("Ct7");
         LogUtils.setLogEnable(true); //后台日志 默认为true
-        LogUtils.setShowLocationEnable(true); //打印日志的时候是否打印位置信息 默认为false
+        LogUtils.setShowLocationEnable(false); //打印日志的时候是否打印位置信息 默认为false
         AppFolder.createAppFolder("MyApp");
 
         initCrash();

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.ct7liang.activityTime.ActivityTime;
 import com.android.ct7liang.address_select.AddressSelectActivity;
 import com.android.ct7liang.bank_card.CheckBankCardActivity;
 import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
@@ -51,6 +52,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.changeIcon).setOnClickListener(this);
         findViewById(R.id.edit_text_soft_input).setOnClickListener(this);
         findViewById(R.id.filpper).setOnClickListener(this);
+        findViewById(R.id.activity).setOnClickListener(this);
     }
 
     @Override
@@ -123,6 +125,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.filpper:
                 startActivity(new Intent(mAct, ViewFlipperActivity.class));
+                break;
+            case R.id.activity:
+                startActivity(new Intent(mAct, ActivityTime.class));
                 break;
         }
     }
