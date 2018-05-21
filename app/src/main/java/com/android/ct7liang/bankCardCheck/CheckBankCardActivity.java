@@ -1,4 +1,4 @@
-package com.android.ct7liang.bank_card;
+package com.android.ct7liang.bankCardCheck;
 
 import android.text.TextUtils;
 import android.view.View;

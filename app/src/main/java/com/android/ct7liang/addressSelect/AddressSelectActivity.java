@@ -1,4 +1,4 @@
-package com.android.ct7liang.address_select;
+package com.android.ct7liang.addressSelect;
 
 import android.view.View;
 import android.widget.TextView;

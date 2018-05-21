@@ -131,7 +131,7 @@
         <!-- 自定义控件 - 太极 -->
         <activity android:name=".taiji.TaiJiActivity" />
         <!-- 银行卡卡号校验 -->
-        <activity android:name=".bank_card.CheckBankCardActivity" />
+        <activity android:name=".bankCardCheck.CheckBankCardActivity" />
         <!-- 查看大图(String) -->
         <activity android:name=".QueryImageActivity" />
         <!-- 查看大图(Integer) -->
@@ -141,10 +141,10 @@
         <!-- 加载效果 -->
         <activity android:name=".loading.LoadingActivity" />
         <!-- 自定义地址选择三级联动 -->
-        <activity android:name=".address_select.AddressSelectActivity" />
+        <activity android:name=".addressSelect.AddressSelectActivity" />
         <!-- BiliBili弹幕 -->
-        <activity android:name=".bilibili_danmu.BiliBiliDanmuActivity" />
-        <activity android:name=".bilibili_danmu.MyDanmuActivity" />
+        <activity android:name=".bilibiliDanmu.BiliBiliDanmuActivity" />
+        <activity android:name=".bilibiliDanmu.MyDanmuActivity" />
         <!-- 可折叠标题栏 -->
         <activity
             android:name=".collapsing.ScrollingActivity"
@@ -176,7 +176,7 @@
             android:label="@string/title_activity_status_bar_f"
             android:theme="@style/AppTheme.NoActionBar" />
         <!-- 图片模糊 -->
-        <activity android:name=".blur.BlurAActivity" />
+        <activity android:name=".imageBlur.ImageBlurActivity" />
         <!-- 登录界面 -->
         <activity android:name=".login_page.LoginCategoryActivity" />
         <activity android:name=".login_page.LoginAActivity" />
@@ -193,11 +193,11 @@
         <activity android:name=".menu.boomMenu.HamButtonActivity" />
         <activity android:name=".menu.boomMenu.SquarePieceCornerRadiusActivity" />
         <activity android:name=".menu.contextMenu.ContextMenuActivity" />
-        <activity android:name=".change_icon.ChangeLogoActivity" />
+        <activity android:name=".changeLogo.ChangeLogoActivity" />
         <activity android:name=".soft_broad_case.SoftActivity" />
         <activity android:name=".view_flipper.ViewFlipperActivity" />
         <activity
-            android:name=".activityTime.ActivityTime"
+            android:name=".activityLifecycle.ActivityLifecycleActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
     </application>

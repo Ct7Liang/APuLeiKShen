@@ -8,12 +8,12 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.ct7liang.activityTime.ActivityTime;
-import com.android.ct7liang.address_select.AddressSelectActivity;
-import com.android.ct7liang.bank_card.CheckBankCardActivity;
-import com.android.ct7liang.bilibili_danmu.BiliBiliDanmuActivity;
-import com.android.ct7liang.blur.BlurAActivity;
-import com.android.ct7liang.change_icon.ChangeLogoActivity;
+import com.android.ct7liang.activityLifecycle.ActivityLifecycleActivity;
+import com.android.ct7liang.addressSelect.AddressSelectActivity;
+import com.android.ct7liang.bankCardCheck.CheckBankCardActivity;
+import com.android.ct7liang.bilibiliDanmu.BiliBiliDanmuActivity;
+import com.android.ct7liang.imageBlur.ImageBlurActivity;
+import com.android.ct7liang.changeLogo.ChangeLogoActivity;
 import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
@@ -44,13 +44,13 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("可折叠标题栏", ScrollTypeActivity.class),
         new MainItemBean("SwitchButton", SwitchButtonActivity.class),
         new MainItemBean("沉浸式状态栏", StatusBarCategoryActivity.class),
-        new MainItemBean("图片模糊处理", BlurAActivity.class),
+        new MainItemBean("图片模糊处理", ImageBlurActivity.class),
         new MainItemBean("仿QQ登录界面", LoginCategoryActivity.class),
         new MainItemBean("菜单控件", MenuActivity.class),
         new MainItemBean("更改App图标", ChangeLogoActivity.class),
         new MainItemBean("键盘焦点处理", SoftActivity.class),
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
-        new MainItemBean("Activity的生命周期", ActivityTime.class)
+        new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class)
     };
 
     @Override

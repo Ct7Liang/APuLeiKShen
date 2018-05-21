@@ -1,4 +1,4 @@
-package com.android.ct7liang.activityTime;
+package com.android.ct7liang.activityLifecycle;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  */
 
-public class ActivityTime extends BaseActivity {
+public class ActivityLifecycleActivity extends BaseActivity {
 
     private TextView A;
     private StringBuilder content;
@@ -23,7 +23,7 @@ public class ActivityTime extends BaseActivity {
 
     @Override
     public int setLayout() {
-        return R.layout.activity_time;
+        return R.layout.activity_activity_lifecycle;
     }
 
     @Override

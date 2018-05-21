@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.android.ct7liang.activityTime.ActivityTime">
+    tools:context="com.android.ct7liang.activityLifecycle.ActivityLifecycleActivity">
 
     <include layout="@layout/title_bar_center"/>
 

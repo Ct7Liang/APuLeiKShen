@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.ct7liang.bilibili_danmu;
+package com.android.ct7liang.bilibiliDanmu;
 
 import android.graphics.Color;
 import android.text.TextUtils;

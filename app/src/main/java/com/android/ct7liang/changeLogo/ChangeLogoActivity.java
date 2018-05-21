@@ -1,4 +1,4 @@
-package com.android.ct7liang.change_icon;
+package com.android.ct7liang.changeLogo;
 
 import android.app.Activity;
 import android.app.ActivityManager;

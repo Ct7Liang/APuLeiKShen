@@ -1,4 +1,4 @@
-package com.android.ct7liang.blur;
+package com.android.ct7liang.imageBlur;
 
 import android.graphics.Color;
 import android.text.TextUtils;
@@ -14,7 +14,7 @@ import com.ct7liang.tangyuan.utils.ToastUtils;
 
 import jp.wasabeef.blurry.Blurry;
 
-public class BlurAActivity extends BaseActivity {
+public class ImageBlurActivity extends BaseActivity {
 
     private ImageView imageView;
     private EditText edit_a;
