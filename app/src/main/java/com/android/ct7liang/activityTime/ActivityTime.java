@@ -4,11 +4,12 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
+import com.android.ct7liang.QueryImageResourceActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.LogUtils;
 import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +19,7 @@ public class ActivityTime extends BaseActivity {
 
     private TextView A;
     private StringBuilder content;
+    private ArrayList<Integer> list;
 
     @Override
     public int setLayout() {
@@ -35,6 +37,7 @@ public class ActivityTime extends BaseActivity {
     public void findView() {
         A = findViewById(R.id.a);
         findViewById(R.id.btn).setOnClickListener(this);
+        findViewById(R.id.image).setOnClickListener(this);
     }
 
     @Override
@@ -57,7 +60,8 @@ public class ActivityTime extends BaseActivity {
 
     @Override
     public void initFinish() {
-
+        list = new ArrayList<>();
+        list.add(R.mipmap.activity_live_image);
     }
 
     @Override
@@ -69,6 +73,9 @@ public class ActivityTime extends BaseActivity {
             case R.id.btn:
                 content = new StringBuilder();
                 A.setText("");
+                break;
+            case R.id.image:
+                QueryImageResourceActivity.start(this, list, 0);
                 break;
         }
     }

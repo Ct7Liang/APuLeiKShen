@@ -199,7 +199,7 @@
         <activity
             android:name=".activityTime.ActivityTime"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+        <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
     </application>
 
 </manifest>

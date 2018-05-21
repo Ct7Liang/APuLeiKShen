@@ -2,6 +2,10 @@ package com.android.ct7liang;
 
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.ct7liang.activityTime.ActivityTime;
@@ -26,6 +30,29 @@ import com.android.ct7liang.zxing.ZXingActivity;
 
 public class MainActivity extends BaseActivity {
 
+    private ListView listView;
+    private MainItemBean[] dataArr = {
+        new MainItemBean("二维码扫描", ZXingActivity.class),
+        new MainItemBean("App崩溃处理", CrashActivity.class),
+        new MainItemBean("反人类音量控制器", FuckingVolumeActivity.class),
+        new MainItemBean("自定义控件-画太极", TaiJiActivity.class),
+        new MainItemBean("银行卡格式校验", CheckBankCardActivity.class),
+        new MainItemBean("ImageView的ScaleType属性", ImageViewScaleTypeActivity.class),
+        new MainItemBean("优美流畅的自定义加载视图", LoadingActivity.class),
+        new MainItemBean("自定义控件-地址选择器", AddressSelectActivity.class),
+        new MainItemBean("弹幕控件", BiliBiliDanmuActivity.class),
+        new MainItemBean("可折叠标题栏", ScrollTypeActivity.class),
+        new MainItemBean("SwitchButton", SwitchButtonActivity.class),
+        new MainItemBean("沉浸式状态栏", StatusBarCategoryActivity.class),
+        new MainItemBean("图片模糊处理", BlurAActivity.class),
+        new MainItemBean("仿QQ登录界面", LoginCategoryActivity.class),
+        new MainItemBean("菜单控件", MenuActivity.class),
+        new MainItemBean("更改App图标", ChangeLogoActivity.class),
+        new MainItemBean("键盘焦点处理", SoftActivity.class),
+        new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
+        new MainItemBean("Activity的生命周期", ActivityTime.class)
+    };
+
     @Override
     public int setLayout() {
         return R.layout.activity_main;
@@ -33,26 +60,38 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        findViewById(R.id.zxing).setOnClickListener(this);
-        findViewById(R.id.crash).setOnClickListener(this);
-        findViewById(R.id.fucking).setOnClickListener(this);
-        findViewById(R.id.taiji).setOnClickListener(this);
-        findViewById(R.id.luhn).setOnClickListener(this);
-        findViewById(R.id.scale_type).setOnClickListener(this);
-        findViewById(R.id.loading).setOnClickListener(this);
-        findViewById(R.id.address_select).setOnClickListener(this);
-        findViewById(R.id.danmu).setOnClickListener(this);
-        findViewById(R.id.scroll).setOnClickListener(this);
-        findViewById(R.id.switch_button).setOnClickListener(this);
-        findViewById(R.id.status_bar).setOnClickListener(this);
-        findViewById(R.id.image_blur).setOnClickListener(this);
-        findViewById(R.id.login_page).setOnClickListener(this);
-        findViewById(R.id.menu).setOnClickListener(this);
-        findViewById(R.id.changeIcon).setOnClickListener(this);
-        findViewById(R.id.edit_text_soft_input).setOnClickListener(this);
-        findViewById(R.id.filpper).setOnClickListener(this);
-        findViewById(R.id.activity).setOnClickListener(this);
+        listView = findViewById(R.id.menuList);
+        listView.setAdapter(new BaseAdapter() {
+            @Override
+            public int getCount() {
+                return dataArr.length;
+            }
+            @Override
+            public Object getItem(int i) {
+                return null;
+            }
+            @Override
+            public long getItemId(int i) {
+                return 0;
+            }
+            @Override
+            public View getView(int i, View view, ViewGroup viewGroup) {
+                View v;
+                if (view == null){
+                    v = View.inflate(mAct, R.layout.item_main_menu, null);
+                }else{
+                    v = view;
+                }
+                ((TextView)v.findViewById(R.id.name)).setText(dataArr[i].name);
+                return v;
+            }
+        });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(mAct, dataArr[i].cls));
+            }
+        });
     }
 
     @Override
@@ -72,63 +111,6 @@ public class MainActivity extends BaseActivity {
             case R.id.back:
                 exitApp();
                 break;
-            case R.id.zxing:
-                startActivity(new Intent(mAct, ZXingActivity.class));
-                break;
-            case R.id.crash:
-                startActivity(new Intent(mAct, CrashActivity.class));
-                break;
-            case R.id.fucking:
-                startActivity(new Intent(mAct, FuckingVolumeActivity.class));
-                break;
-            case R.id.taiji:
-                startActivity(new Intent(mAct, TaiJiActivity.class));
-                break;
-            case R.id.luhn:
-                startActivity(new Intent(mAct, CheckBankCardActivity.class));
-                break;
-            case R.id.scale_type:
-                startActivity(new Intent(mAct, ImageViewScaleTypeActivity.class));
-                break;
-            case R.id.loading:
-                startActivity(new Intent(mAct, LoadingActivity.class));
-                break;
-            case R.id.address_select:
-                startActivity(new Intent(mAct, AddressSelectActivity.class));
-                break;
-            case R.id.danmu:
-                startActivity(new Intent(mAct, BiliBiliDanmuActivity.class));
-                break;
-            case R.id.scroll:
-                startActivity(new Intent(mAct, ScrollTypeActivity.class));
-                break;
-            case R.id.switch_button:
-                startActivity(new Intent(mAct, SwitchButtonActivity.class));
-                break;
-            case R.id.status_bar:
-                startActivity(new Intent(mAct, StatusBarCategoryActivity.class));
-                break;
-            case R.id.image_blur:
-                startActivity(new Intent(mAct, BlurAActivity.class));
-                break;
-            case R.id.login_page:
-                startActivity(new Intent(mAct, LoginCategoryActivity.class));
-                break;
-            case R.id.menu:
-                startActivity(new Intent(mAct, MenuActivity.class));
-                break;
-            case R.id.changeIcon:
-                startActivity(new Intent(mAct, ChangeLogoActivity.class));
-                break;
-            case R.id.edit_text_soft_input:
-                startActivity(new Intent(mAct, SoftActivity.class));
-                break;
-            case R.id.filpper:
-                startActivity(new Intent(mAct, ViewFlipperActivity.class));
-                break;
-            case R.id.activity:
-                startActivity(new Intent(mAct, ActivityTime.class));
-                break;
         }
     }
 
@@ -138,3 +120,4 @@ public class MainActivity extends BaseActivity {
     }
 
 }
+//141
