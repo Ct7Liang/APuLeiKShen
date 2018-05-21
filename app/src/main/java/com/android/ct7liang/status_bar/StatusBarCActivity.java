@@ -8,6 +8,7 @@ public class StatusBarCActivity extends BaseActivity {
 
     @Override
     public int setLayout() {
+        initStatusBar();
         return R.layout.activity_status_bar_c;
     }
 

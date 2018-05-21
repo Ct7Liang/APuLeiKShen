@@ -8,6 +8,7 @@ import android.view.WindowManager;
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.AppFolder;
+import com.ct7liang.tangyuan.utils.loading.LoadingDialog;
 
 import java.io.File;
 
@@ -56,7 +57,8 @@ public class LoginDActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.login:
-                showProgressDialog();
+                LoadingDialog.show(this, false, "请稍后...", null, null);
+//                showProgressDialog();
                 playVideoView();
                 break;
         }
@@ -89,7 +91,8 @@ public class LoginDActivity extends BaseActivity {
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
-                cancelProgress();
+//                cancelProgress();
+                LoadingDialog.dismiss();
                 top.setVisibility(View.GONE);
             }
         });

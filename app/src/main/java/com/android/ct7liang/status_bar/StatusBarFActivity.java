@@ -1,32 +1,28 @@
 package com.android.ct7liang.status_bar;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 
-public class StatusBarFActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class StatusBarFActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
-    public int setLayout() {
-        return R.layout.activity_status_bar_f;
-    }
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    @Override
-    protected void setStatusBar() {
+        setContentView(R.layout.activity_status_bar_f);
 
-    }
-
-    @Override
-    public void findView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -43,21 +39,6 @@ public class StatusBarFActivity extends BaseActivity implements NavigationView.O
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override
@@ -117,8 +98,4 @@ public class StatusBarFActivity extends BaseActivity implements NavigationView.O
         return true;
     }
 
-    @Override
-    public void onClick(View view) {
-
-    }
 }

@@ -1,30 +1,28 @@
 package com.android.ct7liang.status_bar;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
-import com.android.ct7liang.BaseActivity;
+import android.view.Window;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
 
-public class StatusBarEActivity extends BaseActivity {
+public class StatusBarEActivity extends AppCompatActivity {
 
     @Override
-    public int setLayout() {
-        return R.layout.activity_status_bar_e;
-    }
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    @Override
-    protected void setStatusBar() {
+        setContentView(R.layout.activity_status_bar_e);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0, 0);
         setSupportActionBar(toolbar);
-    }
 
-    @Override
-    public void findView() {
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,23 +33,4 @@ public class StatusBarEActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
-    }
-
-    @Override
-    public void onClick(View view) {
-
-    }
 }

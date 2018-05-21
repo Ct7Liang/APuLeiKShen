@@ -198,8 +198,23 @@
         <activity android:name=".view_flipper.ViewFlipperActivity" />
         <activity
             android:name=".activityLifecycle.ActivityLifecycleActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <!-- android:configChanges="orientation|keyboardHidden|screenSize" -->
+        <activity android:name=".taskStack.TaskStackActivity" />
+        <activity
+            android:name=".taskStack.StandardActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".taskStack.SingleTopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".taskStack.SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".taskStack.SingleTaskStandardActivity"
+            android:launchMode="standard" />
+        <activity android:name=".taskStack.SingleInstanceActivity"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

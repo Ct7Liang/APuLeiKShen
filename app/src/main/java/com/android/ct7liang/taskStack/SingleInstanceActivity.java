@@ -1,6 +1,6 @@
-package com.android.ct7liang.status_bar;
+package com.android.ct7liang.taskStack;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -8,24 +8,24 @@ import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
 
-public class StatusBarDActivity extends BaseActivity {
+public class SingleInstanceActivity extends BaseActivity {
 
     @Override
     public int setLayout() {
-        initStatusBar();
-        return R.layout.activity_status_bar_d;
-    }
-
-    @Override
-    public void findView() {
-        findViewById(R.id.left_image).setOnClickListener(this);
-        findViewById(R.id.title_back_ground).setBackgroundColor(Color.parseColor("#00FFFFFF"));
-        ((TextView)findViewById(R.id.left_text)).setText("标题栏+背景图片沉浸");
+        return R.layout.activity_single_instance;
     }
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0, 0);
+        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
+        findViewById(R.id.title_back_ground).setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0 , 0);
+        findViewById(R.id.left_image).setOnClickListener(this);
+        ((TextView)findViewById(R.id.center_text)).setText("singleInstance模式");
+    }
+
+    @Override
+    public void findView() {
+
     }
 
     @Override
@@ -48,6 +48,9 @@ public class StatusBarDActivity extends BaseActivity {
         switch (view.getId()){
             case R.id.left_image:
                 finish();
+                break;
+            case R.id.btn:
+                startActivity(new Intent(this, SingleInstanceActivity.class));
                 break;
         }
     }

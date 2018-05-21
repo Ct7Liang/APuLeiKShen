@@ -25,6 +25,7 @@ import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
+import com.android.ct7liang.taskStack.TaskStackActivity;
 import com.android.ct7liang.view_flipper.ViewFlipperActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 
@@ -50,7 +51,8 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("更改App图标", ChangeLogoActivity.class),
         new MainItemBean("键盘焦点处理", SoftActivity.class),
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
-        new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class)
+        new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class),
+        new MainItemBean("Activity的启动模式", TaskStackActivity.class)
     };
 
     @Override

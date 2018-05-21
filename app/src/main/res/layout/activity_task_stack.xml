@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.ct7liang.taskStack.TaskStackActivity">
+
+    <include layout="@layout/title_bar_center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/standard"
+            android:text="standard模式"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/singleTop"
+            android:text="singleTop模式"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/singleTask"
+            android:text="singleTask模式"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/singleInstance"
+            android:text="singleInstance模式"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>
