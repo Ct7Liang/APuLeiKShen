@@ -16,6 +16,7 @@ public class SingleTaskActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        findViewById(R.id.btn).setOnClickListener(this);
         initStatusBar();
     }
 
