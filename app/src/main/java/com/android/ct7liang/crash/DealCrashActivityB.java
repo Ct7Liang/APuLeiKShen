@@ -1,9 +1,10 @@
 package com.android.ct7liang.crash;
 
 import android.view.View;
-import android.widget.TextView;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class DealCrashActivityB extends BaseActivity {
 
@@ -14,8 +15,19 @@ public class DealCrashActivityB extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        ((TextView)findViewById(R.id.title)).setText("崩溃后跳转页面B");
+        initStatusBar();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+        titleBarView.setOnLeftImgClick(new TitleBarView.OnLeftImgClick() {
+            @Override
+            public void onClick(View view) {
+                exitApp();
+            }
+        });
     }
 
     @Override
@@ -35,11 +47,7 @@ public class DealCrashActivityB extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.back:
-                exitApp();
-                break;
-        }
+
     }
 
     @Override

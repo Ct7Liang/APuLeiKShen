@@ -7,8 +7,6 @@
     android:orientation="vertical"
     tools:context="com.android.ct7liang.crash.CrashActivity">
 
-    <include layout="@layout/app_title_layout"/>
-
     <com.ct7liang.tangyuan.view_titlebar.TitleBarView
         android:id="@+id/title_bar_view"
         android:layout_width="match_parent"
