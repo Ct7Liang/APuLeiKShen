@@ -2,9 +2,10 @@ package com.android.ct7liang.status_bar;
 
 import android.graphics.Color;
 import android.view.View;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 
 public class StatusBarAActivity extends BaseActivity {
 
@@ -15,7 +16,7 @@ public class StatusBarAActivity extends BaseActivity {
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0, 0);
+        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0, 0);
     }
 
     @Override

@@ -5,9 +5,10 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.jaeger.library.StatusBarUtil;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.uuzuche.lib_zxing.activity.CaptureFragment;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
@@ -24,18 +25,28 @@ public class MyStyleScanActivity extends BaseActivity {
     }
 
     @Override
-    protected void setStatusBar() {
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.zxingColor), 0);
-    }
-
-    @Override
     public void findView() {
         CaptureFragment captureFragment = new CaptureFragment();
         CodeUtils.setFragmentArgs(captureFragment, R.layout.my_style_scan_view);
         captureFragment.setAnalyzeCallback(analyzeCallback);
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_zxing_container, captureFragment).commit();
-        findViewById(R.id.back).setOnClickListener(this);
-        findViewById(R.id.right).setOnClickListener(this);
+        initStatusBar();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+        titleBarView.setOnRightImgClick(new TitleBarView.OnRightImgClick() {
+            @Override
+            public void onClick(View view) {
+                /**扫描本地图片*/
+                Intent intent2 = new Intent(Intent.ACTION_GET_CONTENT);
+                intent2.addCategory(Intent.CATEGORY_OPENABLE);
+                intent2.setType("image/*");
+                startActivityForResult(intent2, REQUEST_IMAGE);
+            }
+        });
     }
 
     @Override
@@ -55,18 +66,18 @@ public class MyStyleScanActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.back:
-                finish();
-                break;
-            case R.id.right:
-                /**扫描本地图片*/
-                Intent intent2 = new Intent(Intent.ACTION_GET_CONTENT);
-                intent2.addCategory(Intent.CATEGORY_OPENABLE);
-                intent2.setType("image/*");
-                startActivityForResult(intent2, REQUEST_IMAGE);
-                break;
-        }
+//        switch (v.getId()){
+//            case R.id.back:
+//                finish();
+//                break;
+//            case R.id.right:
+//                /**扫描本地图片*/
+//                Intent intent2 = new Intent(Intent.ACTION_GET_CONTENT);
+//                intent2.addCategory(Intent.CATEGORY_OPENABLE);
+//                intent2.setType("image/*");
+//                startActivityForResult(intent2, REQUEST_IMAGE);
+//                break;
+//        }
     }
 
     @Override

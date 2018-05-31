@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 
 public class SingleInstanceActivity extends BaseActivity {
 
@@ -18,7 +18,7 @@ public class SingleInstanceActivity extends BaseActivity {
     @Override
     protected void setStatusBar() {
         findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0 , 0);
+        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0 , 0);
         findViewById(R.id.left_image).setOnClickListener(this);
         ((TextView)findViewById(R.id.center_text)).setText("singleInstance模式");
     }

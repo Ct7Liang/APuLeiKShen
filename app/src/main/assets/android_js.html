@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Android与Js的方法互调</title>
+	</head>
+	<body>
+		<script>
+			function jsGetAndroid(){
+				var msg = androidjs.showInfoFromJs("我是被Js调用的Android代码, 将html的数据传入Android吐司中");
+                document.getElementById("androidgetjs").innerHTML=msg;
+			}
+			function androidGetJs(msg){
+				document.getElementById("androidgetjs").innerHTML="我是被Android调用的Js代码, 将Android的数据传入html页面中："+msg;
+			}
+		</script>
+		<button id="jsgetandroid" onclick="jsGetAndroid()">点我调用android方法</button>
+		<div id="androidgetjs"></div>
+	</body>
+</html>

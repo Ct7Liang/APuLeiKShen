@@ -213,8 +213,10 @@
         <activity
             android:name=".taskStack.SingleTaskStandardActivity"
             android:launchMode="standard" />
-        <activity android:name=".taskStack.SingleInstanceActivity"
-            android:launchMode="singleInstance"/>
+        <activity
+            android:name=".taskStack.SingleInstanceActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".web_view.WebViewTestActivity"></activity>
     </application>
 
 </manifest>

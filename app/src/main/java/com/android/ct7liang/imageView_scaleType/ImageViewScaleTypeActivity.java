@@ -4,11 +4,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 import com.zaaach.toprightmenu.MenuItem;
 import com.zaaach.toprightmenu.TopRightMenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,7 +79,7 @@ public class ImageViewScaleTypeActivity extends BaseActivity {
             case R.id.test:
                 new TopRightMenu(this)
                     .setHeight(RecyclerView.LayoutParams.WRAP_CONTENT)     //默认高度480
-                    .setWidth(ScreenInfoUtil.getScreenWH(mAct)[0]/3)      //默认宽度wrap_content
+                    .setWidth(ScreenUtil.getUtils().getStatusHeight(this)/3)      //默认宽度wrap_content
                     .showIcon(false)     //显示菜单图标，默认为true
                             .setAnimationStyle(R.style.TRM_ANIM_STYLE)
                             .addMenuList(menuItems)

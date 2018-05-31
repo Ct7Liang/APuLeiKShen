@@ -8,8 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
+
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 
 public class StatusBarEActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class StatusBarEActivity extends AppCompatActivity {
         setContentView(R.layout.activity_status_bar_e);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0, 0);
+        toolbar.setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0, 0);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

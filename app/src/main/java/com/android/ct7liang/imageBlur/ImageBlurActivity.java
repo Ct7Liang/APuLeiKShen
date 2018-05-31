@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenInfoUtil;
+import com.ct7liang.tangyuan.utils.ScreenUtil;
 import com.ct7liang.tangyuan.utils.ToastUtils;
 
 import jp.wasabeef.blurry.Blurry;
@@ -27,7 +27,7 @@ public class ImageBlurActivity extends BaseActivity {
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenInfoUtil.getStatusHeight(this), 0 ,0);
+        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0 ,0);
     }
 
     @Override

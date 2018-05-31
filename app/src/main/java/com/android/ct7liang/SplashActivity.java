@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 public class SplashActivity extends BaseActivity {
@@ -21,14 +20,8 @@ public class SplashActivity extends BaseActivity {
     };
 
     @Override
-    protected void setStatusBar() {
-        int flag= WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        //设置当前窗体为全屏显示
-        getWindow().setFlags(flag, flag);
-    }
-
-    @Override
     public int setLayout() {
+        setFullScreen();
         return R.layout.activity_splash;
     }
 
@@ -55,9 +48,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    public void onClick(View v) {
-
-    }
+    public void onClick(View v) {}
 
     @Override
     protected void onDestroy() {

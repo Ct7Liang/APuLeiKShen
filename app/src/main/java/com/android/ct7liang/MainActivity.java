@@ -12,11 +12,11 @@ import com.android.ct7liang.activityLifecycle.ActivityLifecycleActivity;
 import com.android.ct7liang.addressSelect.AddressSelectActivity;
 import com.android.ct7liang.bankCardCheck.CheckBankCardActivity;
 import com.android.ct7liang.bilibiliDanmu.BiliBiliDanmuActivity;
-import com.android.ct7liang.imageBlur.ImageBlurActivity;
 import com.android.ct7liang.changeLogo.ChangeLogoActivity;
 import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
+import com.android.ct7liang.imageBlur.ImageBlurActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
 import com.android.ct7liang.login_page.LoginCategoryActivity;
@@ -27,11 +27,12 @@ import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.taskStack.TaskStackActivity;
 import com.android.ct7liang.view_flipper.ViewFlipperActivity;
+import com.android.ct7liang.web_view.WebViewTestActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class MainActivity extends BaseActivity {
 
-    private ListView listView;
     private MainItemBean[] dataArr = {
         new MainItemBean("二维码扫描", ZXingActivity.class),
         new MainItemBean("App崩溃处理", CrashActivity.class),
@@ -52,7 +53,8 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("键盘焦点处理", SoftActivity.class),
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
         new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class),
-        new MainItemBean("Activity的启动模式", TaskStackActivity.class)
+        new MainItemBean("Activity的启动模式", TaskStackActivity.class),
+        new MainItemBean("WebView", WebViewTestActivity.class)
     };
 
     @Override
@@ -62,7 +64,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        listView = findViewById(R.id.menuList);
+        ListView listView = findViewById(R.id.menuList);
         listView.setAdapter(new BaseAdapter() {
             @Override
             public int getCount() {
@@ -101,20 +103,26 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        ((TextView)findViewById(R.id.title)).setText(getResources().getString(R.string.app_name));
+        initStatusBar();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+        titleBarView.setOnLeftImgClick(new TitleBarView.OnLeftImgClick() {
+            @Override
+            public void onClick(View view) {
+                exitApp();
+            }
+        });
     }
 
     @Override
     public void initFinish() {}
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.back:
-                exitApp();
-                break;
-        }
-    }
+    public void onClick(View v) {}
 
     @Override
     public void onBackPressed() {

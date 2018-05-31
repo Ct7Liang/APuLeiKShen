@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.android.ct7liang.crash.CrashActivity">
 
     <include layout="@layout/app_title_layout"/>
+
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:title="App崩溃处理"
+        app:title_text_size="17sp"
+        app:left_img_padding="16dp">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <Button
         android:layout_marginLeft="10dp"

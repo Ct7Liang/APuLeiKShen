@@ -17,6 +17,7 @@ import com.android.ct7liang.utils.BitmapFileUtils;
 import com.ct7liang.tangyuan.AppFolder;
 import com.ct7liang.tangyuan.utils.LogUtils;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
@@ -52,8 +53,6 @@ public class ZXingActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        ((TextView)findViewById(R.id.title)).setText("zxing二维码扫描");
-        findViewById(R.id.back).setOnClickListener(this);
         text = (TextView) findViewById(R.id.text);
         image = (ImageView) findViewById(R.id.image);
         editText = (EditText) findViewById(R.id.edit_text);
@@ -63,6 +62,13 @@ public class ZXingActivity extends BaseActivity {
         findViewById(R.id.create_with_logo).setOnClickListener(this);
         findViewById(R.id.my_style_scan).setOnClickListener(this);
         findViewById(R.id.save).setOnClickListener(this);
+        initStatusBar();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -83,9 +89,6 @@ public class ZXingActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.back:
-                finish();
-                break;
             case R.id.scan:
                 /**直接扫描*/
                 Intent intent1 = new Intent(mAct, CaptureActivity.class);
