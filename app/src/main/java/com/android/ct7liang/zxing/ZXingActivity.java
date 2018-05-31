@@ -161,7 +161,7 @@ public class ZXingActivity extends BaseActivity {
                 }
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
-                    text.setText("二维码内容:  " + result);
+                    text.setText("二维码内容: " + result);
                     LogUtils.write(result);
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
                     text.setText("解析二维码失败");
@@ -175,8 +175,8 @@ public class ZXingActivity extends BaseActivity {
                 CodeUtils.analyzeBitmap(ImageUtil.getImageAbsolutePath(this, uri), new CodeUtils.AnalyzeCallback() {
                     @Override
                     public void onAnalyzeSuccess(Bitmap mBitmap, String result) {
-                        text.setText("二维码内容:  " + result);
-                        LogUtils.write(result);
+                        text.setText("二维码扫描结果: " + result);
+                        LogUtils.write("二维码扫描结果: " + result);
                     }
                     @Override
                     public void onAnalyzeFailed() {

@@ -66,18 +66,7 @@ public class MyStyleScanActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.back:
-//                finish();
-//                break;
-//            case R.id.right:
-//                /**扫描本地图片*/
-//                Intent intent2 = new Intent(Intent.ACTION_GET_CONTENT);
-//                intent2.addCategory(Intent.CATEGORY_OPENABLE);
-//                intent2.setType("image/*");
-//                startActivityForResult(intent2, REQUEST_IMAGE);
-//                break;
-//        }
+
     }
 
     @Override
