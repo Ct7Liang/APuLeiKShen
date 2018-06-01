@@ -4,9 +4,9 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.view.View;
 import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.licrafter.library.VolumeSliderView;
 
 public class FuckingVolumeActivity extends BaseActivity {
@@ -22,10 +22,15 @@ public class FuckingVolumeActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        ((TextView)findViewById(R.id.title)).setText("反人类手机音量控制器");
         mVolumeSliderView = (VolumeSliderView) findViewById(R.id.fucking);
         tv = (TextView) findViewById(R.id.tv);
+        initStatusBar();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -53,10 +58,6 @@ public class FuckingVolumeActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.back:
-                finish();
-                break;
-        }
+
     }
 }

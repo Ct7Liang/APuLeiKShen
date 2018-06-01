@@ -4,18 +4,12 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.QueryImageResourceActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.LogUtils;
-import com.ct7liang.tangyuan.utils.ScreenUtil;
-
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import java.util.ArrayList;
-
-/**
- *
- */
 
 public class ActivityLifecycleActivity extends BaseActivity {
 
@@ -40,25 +34,20 @@ public class ActivityLifecycleActivity extends BaseActivity {
         A = findViewById(R.id.a);
         findViewById(R.id.btn).setOnClickListener(this);
         findViewById(R.id.image).setOnClickListener(this);
+        initStatusBar();
     }
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0, 0);
-        ((TextView)findViewById(R.id.center_text)).setText("Activity的生命周期");
-        findViewById(R.id.left_image).setOnClickListener(this);
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
-
-    }
+    public void initData() {}
 
     @Override
-    public void initView() {
-
-    }
+    public void initView() {}
 
     @Override
     public void initFinish() {
@@ -69,9 +58,6 @@ public class ActivityLifecycleActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.left_image:
-                finish();
-                break;
             case R.id.btn:
                 content = new StringBuilder();
                 A.setText("");
