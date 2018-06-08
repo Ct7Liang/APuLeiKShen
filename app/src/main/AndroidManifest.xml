@@ -216,7 +216,9 @@
         <activity
             android:name=".taskStack.SingleInstanceActivity"
             android:launchMode="singleInstance" />
-        <activity android:name=".web_view.WebViewTestActivity"></activity>
+        <activity android:name=".web_view.WebViewTestActivity" />
+        <activity android:name=".refresh.QQRefreshActivity" />
+        <activity android:name=".refresh.ScrollActivity"></activity>
     </application>
 
 </manifest>

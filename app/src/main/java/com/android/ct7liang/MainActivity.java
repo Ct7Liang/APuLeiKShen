@@ -21,6 +21,7 @@ import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
 import com.android.ct7liang.login_page.LoginCategoryActivity;
 import com.android.ct7liang.menu.MenuActivity;
+import com.android.ct7liang.refresh.QQRefreshActivity;
 import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
@@ -54,7 +55,8 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
         new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class),
         new MainItemBean("Activity的启动模式", TaskStackActivity.class),
-        new MainItemBean("WebView", WebViewTestActivity.class)
+        new MainItemBean("WebView", WebViewTestActivity.class),
+        new MainItemBean("刷新页面", QQRefreshActivity.class)
     };
 
     @Override

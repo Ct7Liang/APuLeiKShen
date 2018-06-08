@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.android.ct7liang.refresh.QQRefreshActivity">
+
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title="QQ页面刷新"
+        app:title_text_size="17sp">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/test"
+            android:layout_marginTop="-80dp"
+            android:background="#555555"
+            android:text="正在刷新..."
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
