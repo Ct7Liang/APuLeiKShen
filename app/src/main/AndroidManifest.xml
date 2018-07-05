@@ -218,7 +218,10 @@
             android:launchMode="singleInstance" />
         <activity android:name=".web_view.WebViewTestActivity" />
         <activity android:name=".refresh.QQRefreshActivity" />
-        <activity android:name=".refresh.ScrollActivity"></activity>
+        <activity android:name=".refresh.ScrollActivity" />
+        <activity android:name=".html.HtmlSelectActivity" />
+        <activity android:name=".html.HtmlDetailActivity" />
+        <activity android:name=".html.ZPActivity"></activity>
     </application>
 
 </manifest>

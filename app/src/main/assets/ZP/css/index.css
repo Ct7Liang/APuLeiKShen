@@ -1,0 +1,275 @@
+.bg_img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	src
+}
+.bg_zz{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.15;
+}
+.bg_line{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.page{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: #FFFFFF;
+}
+.content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+
+.t_line{
+	position: absolute;
+	width: 96%;
+	height: 1px;
+	/*left: 2%;*/
+	right: 4%;   /*2*/
+	top: 1.5%;
+	background-color: #FFFFFF;
+}
+.r_line{
+	position: absolute;
+	width: 1px;
+	right: 2%;
+	/*top: 1.5%;*/
+	bottom: 3%;  /*1.5*/
+	height: 97%;
+	background-color: #FFFFFF;
+}
+.b_line{
+	position: absolute;
+	width: 96%;
+	height: 1px;
+	left: 4%;  /*2*/
+	/*right: 2%;*/
+	bottom: 1.5%;
+	background-color: #FFFFFF;
+}
+.l_line{
+	position: absolute;
+	width: 1px;
+	left: 2%;
+	top: 3%;  /*1.5*/
+	/*bottom: 1.5%;*/
+	height: 97%;
+	background-color: #FFFFFF;
+}
+.out_bg{
+	position: absolute;
+	top: 3%;
+	bottom: 3%;
+	left: 4%;
+	right: 4%;
+	padding-top: 3% 4% 3% 4%;
+	width: auto;
+	height: auto;
+	border: solid 8px #000000;
+	opacity: 0.25;
+}
+.center_bg{
+	position: absolute;
+	top: 5.5%;
+	bottom: 5.5%;
+	left: 8%;
+	right: 8%;
+	width: auto;
+	height: auto;
+	background-color: #000000;
+	opacity: 0.25;
+}
+.inner_bg{
+	position: absolute;
+	top: 5.5%;
+	bottom: 5.5%;
+	left: 8%;
+	right: 8%;
+	padding: 2% 2% 2% 2%;
+	width: auto;
+	height: auto;
+	opacity: 1;
+}
+/* ------------------封面-------------------*/
+.page1title{
+	text-align: center;
+	font: 13px "仿宋";
+	letter-spacing: 0.2em;
+	line-height: 55px;
+}
+.page1img{
+	width: 60%;
+}
+#page1name{
+	font: 17px "仿宋";
+	display: block;
+	font-weight: bold;
+	line-height: 50px;
+}
+#page1title{
+	font: 17px "仿宋";
+	display: block;
+	font-weight: bold;
+}
+.page1end{
+	position: absolute;
+	width: 100%;
+	bottom: 2%;
+	font: 13px "仿宋";
+	line-height: 18px;
+}
+
+
+/* ------------------关于我们-------------------*/
+.page2title{
+	font: 14px "仿宋";
+	line-height: 20px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.page2content{
+	font: 14px "仿宋";
+	line-height: 25px;
+	text-indent: 2em;
+	text-align: start;
+	font-weight: bold;
+}
+
+
+/*------------------员工福利-------------------*/
+.page3title{
+	font: 16px "仿宋";
+	line-height: 22px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.page3content{
+	font: 16px "仿宋";
+	line-height: 35px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: limegreen;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+/*------------------办公环境-------------------*/
+.page4title{
+	font: 16px "仿宋";
+	line-height: 22px;
+	margin-top: 3%;
+	margin-bottom: 4%; 
+	font-weight: bold;
+}
+.h_img{
+	display: block;
+	width: 100%;
+	height: 180px;
+	margin-bottom: 1%;
+}
+.v_imgl{
+	float: left;
+	width: 49.5%;	
+	height: 200;
+	padding-right: 0.5%;
+}
+.v_imgr{
+	padding-left: 0.5%;
+	width: 49.5%;	
+	height: 200;
+}
+
+/*------------------招聘职位-------------------*/
+.page5title{
+	font: 16px "仿宋";
+	line-height: 22px;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+.page5content{
+	font: 13px "仿宋";
+	line-height: 18px;
+	text-align: start;
+	font-weight: bold;
+}
+
+/*------------------加入我们-------------------*/
+.page6title{
+	font: 16px "仿宋";
+	line-height: 22px;
+	margin-top: 8px;
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+.page6content{
+	font: 13px "仿宋";
+	line-height: 18px;
+	text-align: start;
+	font-weight: bold;
+}
+.input{
+	border: solid 1px #388CA9;
+	width: auto;
+	height: 50px;
+	margin-bottom: 10px;
+	background-color: #efefef;
+	line-height: 50px;
+	padding-left: 10px;
+	color: #999999;
+	border-radius: 8px;
+}
+.btn{
+	width: auto;
+	height: 48px;
+	background-color: #388CA9;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 8px;
+}
+
+
+/*------------------联系我们-------------------*/
+.page7title{
+	font: 16px "仿宋";
+	line-height: 22px;
+	margin-top: 8px;
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+.page7content{
+	font: 14px "仿宋";
+	line-height: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.page7content img{
+	width: 60%;
+	height: auto;
+}
+.page7info{
+	margin-top: 5px;
+	text-align: start;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.info{
+	text-indent: 1em;
+}
+.title{
+	margin-top: 10px;
+}

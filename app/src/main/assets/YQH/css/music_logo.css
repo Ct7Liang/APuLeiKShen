@@ -1,0 +1,35 @@
+#music_logo{
+	position: fixed;
+	top: 2%;  
+	right: 2%;
+	width: 5%;
+	z-index: 1000;
+}
+.music_logo{
+	-webkit-animation: rotate 2s linear infinite;
+	animation: rotate 2s linear infinite;
+}
+@keyframes rotate{
+	from{
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes rotate{
+	from{
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to{
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
