@@ -15,6 +15,7 @@ public class ZPActivity extends BaseActivity {
 
     @Override
     public void findView() {
+
         initStatusBar();
     }
 
