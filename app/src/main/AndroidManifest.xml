@@ -19,6 +19,7 @@
     <!-- 读取通讯录权限 -->
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
+
     <application
         android:name=".BaseApp"
         android:allowBackup="true"
@@ -225,7 +226,8 @@
         <activity android:name=".html.HtmlSelectActivity" />
         <activity android:name=".html.HtmlDetailActivity" />
         <activity android:name=".html.ZPActivity" />
-        <activity android:name=".getContacts.GetContactsActivity"></activity>
+        <activity android:name=".getContacts.GetContactsActivity" />
+        <activity android:name=".gsyVideoPlayer.GsyVideoPlayerActivity"></activity>
     </application>
 
 </manifest>
