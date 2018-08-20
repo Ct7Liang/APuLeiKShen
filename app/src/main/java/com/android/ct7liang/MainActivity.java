@@ -16,6 +16,7 @@ import com.android.ct7liang.changeLogo.ChangeLogoActivity;
 import com.android.ct7liang.collapsing.ScrollTypeActivity;
 import com.android.ct7liang.crash.CrashActivity;
 import com.android.ct7liang.fucking_slide.FuckingVolumeActivity;
+import com.android.ct7liang.getContacts.GetContactsActivity;
 import com.android.ct7liang.html.HtmlSelectActivity;
 import com.android.ct7liang.imageBlur.ImageBlurActivity;
 import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
@@ -58,7 +59,8 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("Activity的启动模式", TaskStackActivity.class),
         new MainItemBean("WebView", WebViewTestActivity.class),
         new MainItemBean("刷新页面", QQRefreshActivity.class),
-        new MainItemBean("加载本地静态Html页面", HtmlSelectActivity.class)
+        new MainItemBean("加载本地静态Html页面", HtmlSelectActivity.class),
+        new MainItemBean("获取手机通话记录", GetContactsActivity.class)
     };
 
     @Override

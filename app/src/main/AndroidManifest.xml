@@ -16,6 +16,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
+    <!-- 读取通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
     <application
         android:name=".BaseApp"
         android:allowBackup="true"
@@ -221,7 +224,8 @@
         <activity android:name=".refresh.ScrollActivity" />
         <activity android:name=".html.HtmlSelectActivity" />
         <activity android:name=".html.HtmlDetailActivity" />
-        <activity android:name=".html.ZPActivity"></activity>
+        <activity android:name=".html.ZPActivity" />
+        <activity android:name=".getContacts.GetContactsActivity"></activity>
     </application>
 
 </manifest>
