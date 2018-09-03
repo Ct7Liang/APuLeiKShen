@@ -1,16 +1,14 @@
 package com.android.ct7liang.imageBlur;
 
-import android.graphics.Color;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenUtil;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 import jp.wasabeef.blurry.Blurry;
 
@@ -27,14 +25,13 @@ public class ImageBlurActivity extends BaseActivity {
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0 ,0);
+        TitleBarView title = findViewById(R.id.title_bar_view);
+        title.setStatusBar(this);
     }
 
     @Override
     public void findView() {
-        findViewById(R.id.title_back_ground).setBackgroundColor(Color.parseColor("#00000000"));
-        ((TextView)findViewById(R.id.left_text)).setText("图片模糊");
-        findViewById(R.id.left_image).setOnClickListener(this);
+        initStatusBar();
         imageView = (ImageView)findViewById(R.id.image);
         edit_a = findViewById(R.id.number_a);
         edit_b = findViewById(R.id.number_b);
@@ -60,9 +57,6 @@ public class ImageBlurActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.left_image:
-                finish();
-                break;
             case R.id.resume:
                 imageView.setImageResource(R.mipmap.img_02);
                 break;

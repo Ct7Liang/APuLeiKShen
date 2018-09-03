@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity">
 
-    <RelativeLayout
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title_gravity="center"
+        app:title_text_size="16dp"
+        app:right_img_padding="16dp"
+        app:right_img_src="@mipmap/top_title_more"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <include layout="@layout/app_title_layout"/>
-        <ImageView
-            android:id="@+id/test"
-            android:layout_width="?android:attr/actionBarSize"
-            android:layout_height="?android:attr/actionBarSize"
-            android:src="@mipmap/top_title_more"
-            android:layout_alignParentRight="true"
-            android:padding="16dp"/>
-    </RelativeLayout>
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
+
 
     <ImageView
         android:id="@+id/imageView"

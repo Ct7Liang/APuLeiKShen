@@ -1,11 +1,12 @@
 package com.android.ct7liang.addressSelect;
 
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.address.AddressUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class AddressSelectActivity extends BaseActivity {
 
@@ -16,9 +17,14 @@ public class AddressSelectActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        ((TextView)findViewById(R.id.title)).setText("地址三级联动控件");
+        initStatusBar();
         findViewById(R.id.btn).setOnClickListener(this);
-        findViewById(R.id.back).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

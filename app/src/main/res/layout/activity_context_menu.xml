@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.android.ct7liang.menu.contextMenu.ContextMenuActivity">
 
-    <include layout="@layout/title_bar_center"/>
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_img_padding="16dp"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:title_gravity="start"
+        app:title_text_size="16sp"
+        app:title="contextMenu"
+        app:right_img_src="@mipmap/top_title_more"
+        app:right_img_padding="16dp">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <LinearLayout
         android:layout_marginTop="15dp"

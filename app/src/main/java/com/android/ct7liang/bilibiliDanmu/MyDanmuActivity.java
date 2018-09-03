@@ -7,6 +7,7 @@ import android.widget.EditText;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 import java.util.HashMap;
 
@@ -35,6 +36,7 @@ public class MyDanmuActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         danmakuView = findViewById(R.id.DanMuKuView);
         comment = findViewById(R.id.comment);
         findViewById(R.id.rtl).setOnClickListener(this);
@@ -43,8 +45,13 @@ public class MyDanmuActivity extends BaseActivity {
         findViewById(R.id.bottom).setOnClickListener(this);
         findViewById(R.id.jiao).setOnClickListener(this);
         findViewById(R.id.high).setOnClickListener(this);
-        findViewById(R.id.back).setOnClickListener(this);
         initDanmaKuView();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -59,9 +66,6 @@ public class MyDanmuActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
             case R.id.rtl:
                 isEmpty();
                 addDanmu(BaseDanmaku.TYPE_SCROLL_RL, comment.getText().toString());

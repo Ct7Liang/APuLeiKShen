@@ -7,7 +7,16 @@
     android:orientation="vertical"
     tools:context="com.android.ct7liang.switch_button.SwitchButtonActivity">
 
-    <include layout="@layout/app_title_layout"/>
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        toggle:title_bar_bg="@color/AppThemeColor"
+        toggle:title_gravity="center"
+        toggle:title="SwitchButton"
+        toggle:title_text_size="16sp"
+        toggle:left_img_padding="16dp">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <RelativeLayout
         android:layout_width="match_parent"

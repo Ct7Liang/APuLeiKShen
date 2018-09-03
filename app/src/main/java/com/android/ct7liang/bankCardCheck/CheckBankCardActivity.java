@@ -3,11 +3,13 @@ package com.android.ct7liang.bankCardCheck;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.QueryImageResourceActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
+
 import java.util.ArrayList;
 
 public class CheckBankCardActivity extends BaseActivity {
@@ -22,12 +24,17 @@ public class CheckBankCardActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        ((TextView)findViewById(R.id.title)).setText("符合Luhn规则的银行卡卡号的格式");
+        initStatusBar();
         edit = findViewById(R.id.edit);
         findViewById(R.id.check).setOnClickListener(this);
         findViewById(R.id.img_a).setOnClickListener(this);
         findViewById(R.id.img_b).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -49,9 +56,6 @@ public class CheckBankCardActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
             case R.id.check:
                 String trim = edit.getText().toString().trim();
                 if (TextUtils.isEmpty(trim)){

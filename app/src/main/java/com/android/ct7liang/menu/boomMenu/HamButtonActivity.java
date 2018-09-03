@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.HamButton;
 import com.nightonke.boommenu.BoomMenuButton;
@@ -20,6 +21,8 @@ public class HamButtonActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
+
         //查找控件
         BoomMenuButton boomMenuButton = (BoomMenuButton) findViewById(R.id.boom);
 
@@ -52,6 +55,13 @@ public class HamButtonActivity extends BaseActivity {
 
         //设置boomMenuButton是否可以拖动
         boomMenuButton.setDraggable(true);
+    }
+
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

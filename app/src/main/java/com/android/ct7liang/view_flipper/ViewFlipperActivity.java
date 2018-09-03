@@ -8,6 +8,7 @@ import android.widget.ViewFlipper;
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class ViewFlipperActivity extends BaseActivity {
 
@@ -38,10 +39,17 @@ public class ViewFlipperActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
         findViewById(R.id.left_image).setOnClickListener(this);
         ((TextView)findViewById(R.id.center_text)).setText("FlipperView");
         findViewById(R.id.btn_oc).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

@@ -3,18 +3,17 @@ package com.android.ct7liang.imageView_scaleType;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ScreenUtil;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.zaaach.toprightmenu.MenuItem;
 import com.zaaach.toprightmenu.TopRightMenu;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageViewScaleTypeActivity extends BaseActivity {
+
+public class ImageViewScaleTypeActivity extends BaseActivity implements TitleBarView.OnRightImgClick {
 
     private String[] types = {"CENTER", "CENTER_CROP", "CENTER_INSIDE", "FIT_CENTER", "FIT_XY", "FIT_START", "FIT_END"};
     private ImageView.ScaleType[] scaleTypes = {
@@ -26,6 +25,7 @@ public class ImageViewScaleTypeActivity extends BaseActivity {
     private List<MenuItem> menuItems;
     private ImageView image;
     private int imgIndex;
+    private TitleBarView titleBarView;
 
     @Override
     public int setLayout() {
@@ -34,10 +34,10 @@ public class ImageViewScaleTypeActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        ((TextView)findViewById(R.id.title)).setText(types[0]);
-        test = findViewById(R.id.test);
-        test.setOnClickListener(this);
+        initStatusBar();
+
+        test = findViewById(R.id.right_image);
+
         image = findViewById(R.id.imageView);
         image.setImageResource(imgResource[imgIndex]);
         image.setOnClickListener(this);
@@ -49,48 +49,49 @@ public class ImageViewScaleTypeActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
+    protected void setStatusBar() {
+        titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+        titleBarView.setTitleText(types[0], "#FFFFFF", 16, true);
+        titleBarView.setOnRightImgClick(new TitleBarView.OnRightImgClick() {
+            @Override
+            public void onClick(View view) {
+                new TopRightMenu(mAct)
+                        .setHeight(RecyclerView.LayoutParams.WRAP_CONTENT)     //默认高度480
+                        .setWidth(ScreenUtil.getUtils().getScreenWidth(mAct)/3)      //默认宽度wrap_content
+                        .showIcon(false)     //显示菜单图标，默认为true
+                        .setAnimationStyle(R.style.TRM_ANIM_STYLE)
+                        .addMenuList(menuItems)
+                        .setOnMenuItemClickListener(new TopRightMenu.OnMenuItemClickListener() {
+                            @Override
+                            public void onMenuItemClick(int position) {
+                                titleBarView.setTitleText(types[position], "#FFFFFF", 16, true);
+                                image.setScaleType(scaleTypes[position]);
+                            }
+                        })
+                        .showAsDropDown(test, -225, 0);	//带偏移量
+            }
+        });
     }
 
     @Override
-    public void initView() {
-
-    }
+    public void initData() {}
 
     @Override
-    public void initFinish() {
+    public void initView() {}
 
-    }
+    @Override
+    public void initFinish() {}
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
             case R.id.imageView:
                 imgIndex++;
                 if (imgIndex==imgResource.length){
                     imgIndex = 0;
                 }
                 image.setImageResource(imgResource[imgIndex]);
-                break;
-            case R.id.test:
-                new TopRightMenu(this)
-                    .setHeight(RecyclerView.LayoutParams.WRAP_CONTENT)     //默认高度480
-                    .setWidth(ScreenUtil.getUtils().getStatusHeight(this)/3)      //默认宽度wrap_content
-                    .showIcon(false)     //显示菜单图标，默认为true
-                            .setAnimationStyle(R.style.TRM_ANIM_STYLE)
-                            .addMenuList(menuItems)
-                            .setOnMenuItemClickListener(new TopRightMenu.OnMenuItemClickListener() {
-                                @Override
-                                public void onMenuItemClick(int position) {
-                                    ((TextView)findViewById(R.id.title)).setText(types[position]);
-                                    image.setScaleType(scaleTypes[position]);
-                                }
-                            })
-                            .showAsDropDown(test, -225, 0);	//带偏移量
                 break;
         }
     }

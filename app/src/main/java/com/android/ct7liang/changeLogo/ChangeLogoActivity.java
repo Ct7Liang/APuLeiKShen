@@ -13,6 +13,8 @@ import android.view.View;
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
+
 import java.util.List;
 
 public class ChangeLogoActivity extends BaseActivity {
@@ -64,6 +66,7 @@ public class ChangeLogoActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         findViewById(R.id.resume_icon).setOnClickListener(this);
         findViewById(R.id.change_icon_01).setOnClickListener(this);
         findViewById(R.id.change_icon_02).setOnClickListener(this);
@@ -71,6 +74,12 @@ public class ChangeLogoActivity extends BaseActivity {
         findViewById(R.id.change_icon_04).setOnClickListener(this);
         findViewById(R.id.change_icon_05).setOnClickListener(this);
         findViewById(R.id.change_icon_06).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 
 public class BoomMenuActivity extends BaseActivity {
@@ -15,11 +16,18 @@ public class BoomMenuActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         findViewById(R.id.simple_circle_button).setOnClickListener(this);
         findViewById(R.id.inside_circle_button).setOnClickListener(this);
         findViewById(R.id.outside_circle_button).setOnClickListener(this);
         findViewById(R.id.ham_button).setOnClickListener(this);
         findViewById(R.id.square_and_piece_corner_radius).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

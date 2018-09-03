@@ -26,11 +26,11 @@ import com.android.ct7liang.login_page.LoginCategoryActivity;
 import com.android.ct7liang.menu.MenuActivity;
 import com.android.ct7liang.refresh.QQRefreshActivity;
 import com.android.ct7liang.soft_broad_case.SoftActivity;
-import com.android.ct7liang.status_bar.StatusBarCategoryActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.taskStack.TaskStackActivity;
 import com.android.ct7liang.view_flipper.ViewFlipperActivity;
+import com.android.ct7liang.watches.WatchesActivity;
 import com.android.ct7liang.web_view.WebViewTestActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
@@ -41,15 +41,14 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("二维码扫描", ZXingActivity.class),
         new MainItemBean("App崩溃处理", CrashActivity.class),
         new MainItemBean("反人类音量控制器", FuckingVolumeActivity.class),
-        new MainItemBean("自定义控件-画太极", TaiJiActivity.class),
-        new MainItemBean("银行卡格式校验", CheckBankCardActivity.class),
+        new MainItemBean("自定义 - 太极", TaiJiActivity.class),
+        new MainItemBean("银行卡卡号格式校验", CheckBankCardActivity.class),
         new MainItemBean("ImageView的ScaleType属性", ImageViewScaleTypeActivity.class),
         new MainItemBean("优美流畅的自定义加载视图", LoadingActivity.class),
-        new MainItemBean("自定义控件-地址选择器", AddressSelectActivity.class),
-        new MainItemBean("弹幕控件", BiliBiliDanmuActivity.class),
+        new MainItemBean("自定义 - 地址选择器", AddressSelectActivity.class),
+        new MainItemBean("BiliBili - 烈焰弹幕使", BiliBiliDanmuActivity.class),
         new MainItemBean("可折叠标题栏", ScrollTypeActivity.class),
         new MainItemBean("SwitchButton", SwitchButtonActivity.class),
-        new MainItemBean("沉浸式状态栏", StatusBarCategoryActivity.class),
         new MainItemBean("图片模糊处理", ImageBlurActivity.class),
         new MainItemBean("仿QQ登录界面", LoginCategoryActivity.class),
         new MainItemBean("菜单控件", MenuActivity.class),
@@ -58,11 +57,12 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
         new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class),
         new MainItemBean("Activity的启动模式", TaskStackActivity.class),
-        new MainItemBean("WebView", WebViewTestActivity.class),
+        new MainItemBean("WebView - android与H5交互", WebViewTestActivity.class),
         new MainItemBean("刷新页面", QQRefreshActivity.class),
         new MainItemBean("加载本地静态Html页面", HtmlSelectActivity.class),
         new MainItemBean("获取手机通话记录", GetContactsActivity.class),
-        new MainItemBean("使用GSYVideoPlayer", GsyVideoPlayerActivity.class)
+        new MainItemBean("使用GSYVideoPlayer", GsyVideoPlayerActivity.class),
+        new MainItemBean("自定义 - 钟表", WatchesActivity.class)
     };
 
     @Override

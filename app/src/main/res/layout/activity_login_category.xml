@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.android.ct7liang.login_page.LoginCategoryActivity">
 
-    <include layout="@layout/title_bar_left"/>
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title_gravity="start"
+        app:title_text_size="16sp"
+        app:title="登录界面">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,11 +46,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="登录页面04"/>
-            <Button
-                android:id="@+id/e"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="登录页面05"/>
         </LinearLayout>
     </ScrollView>
 

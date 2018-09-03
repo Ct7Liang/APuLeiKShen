@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class ScrollTypeActivity extends BaseActivity{
 
@@ -15,26 +16,26 @@ public class ScrollTypeActivity extends BaseActivity{
 
     @Override
     public void findView() {
+        initStatusBar();
         findViewById(R.id.a).setOnClickListener(this);
         findViewById(R.id.c).setOnClickListener(this);
         findViewById(R.id.b).setOnClickListener(this);
-        findViewById(R.id.back).setOnClickListener(this);
     }
 
     @Override
-    public void initData() {
-
+    protected void setStatusBar() {
+        TitleBarView title = findViewById(R.id.title_bar_view);
+        title.setStatusBar(this);
     }
 
     @Override
-    public void initView() {
-
-    }
+    public void initData() {}
 
     @Override
-    public void initFinish() {
+    public void initView() {}
 
-    }
+    @Override
+    public void initFinish() {}
 
     @Override
     public void onClick(View view) {
@@ -47,9 +48,6 @@ public class ScrollTypeActivity extends BaseActivity{
                 break;
             case R.id.b:
                 startActivity(new Intent(mAct, CustomScrollingActivity.class));
-                break;
-            case R.id.back:
-                finish();
                 break;
         }
     }

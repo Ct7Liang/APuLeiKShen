@@ -18,10 +18,8 @@ public class LoginAActivity extends BaseActivity{
     }
 
     @Override
-    protected void setStatusBar() {}
-
-    @Override
     public void findView() {
+        initStatusBar();
         image = findViewById(R.id.image);
         new Handler().postDelayed(new Runnable() {
             @Override

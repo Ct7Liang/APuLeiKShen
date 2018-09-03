@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFE3B"
+    android:orientation="vertical"
     tools:context="com.android.ct7liang.taiji.TaiJiActivity">
+
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title_text_size="16sp"
+        app:title_gravity="center"
+        app:title="自定义控件: 太极">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <com.android.ct7liang.taiji.TaiJiView
         android:id="@+id/taiJi"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <include layout="@layout/app_title_layout"/>
+    <!--<include layout="@layout/app_title_layout"/>-->
 
-</RelativeLayout>
+</LinearLayout>

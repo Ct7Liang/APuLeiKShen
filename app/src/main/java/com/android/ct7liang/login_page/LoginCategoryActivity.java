@@ -2,11 +2,10 @@ package com.android.ct7liang.login_page;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.TextView;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.ct7liang.tangyuan.utils.ScreenUtil;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class LoginCategoryActivity extends BaseActivity {
 
@@ -17,24 +16,21 @@ public class LoginCategoryActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
-        ((TextView)findViewById(R.id.left_text)).setText("登录页面");
-        findViewById(R.id.left_image).setOnClickListener(this);
         findViewById(R.id.a).setOnClickListener(this);
         findViewById(R.id.b).setOnClickListener(this);
         findViewById(R.id.c).setOnClickListener(this);
         findViewById(R.id.d).setOnClickListener(this);
-        findViewById(R.id.e).setOnClickListener(this);
     }
 
     @Override
     protected void setStatusBar() {
-        findViewById(R.id.title_back_ground).setPadding(0, ScreenUtil.getUtils().getStatusHeight(this), 0, 0);
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
     public void initData() {
-
+        initStatusBar();
     }
 
     @Override
@@ -64,9 +60,6 @@ public class LoginCategoryActivity extends BaseActivity {
                 break;
             case R.id.d:
                 startActivity(new Intent(this, LoginDActivity.class));
-                break;
-            case R.id.e:
-                startActivity(new Intent(this, LoginEActivity.class));
                 break;
         }
     }

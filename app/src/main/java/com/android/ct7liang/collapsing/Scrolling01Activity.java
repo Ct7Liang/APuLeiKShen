@@ -7,8 +7,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
 import com.android.ct7liang.R;
-import com.jaeger.library.StatusBarUtil;
 
 public class Scrolling01Activity extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class Scrolling01Activity extends AppCompatActivity {
         setContentView(R.layout.activity_scrolling01);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

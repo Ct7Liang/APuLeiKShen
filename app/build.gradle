@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.android.ct7liang"
         minSdkVersion 16
-        targetSdkVersion 19
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -18,9 +18,6 @@ android {
         }
     }
 }
-
-
-
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -74,15 +71,13 @@ dependencies {
      */
 
     compile project(':fucking_volume_slider')
-    //    compile 'com.nightonke:boommenu:2.1.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25+'
     compile 'com.android.support:design:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.github.Ct7Liang:tangyuan:1.1.6'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
+    compile 'com.github.Ct7Liang:tangyuan:1.1.7'
     compile 'com.github.Ct7Liang:Regional:1.0.3'
     compile 'cn.yipianfengye.android:zxing-library:2.2'
     compile 'cat.ereza:customactivityoncrash:2.2.0'
-    compile 'com.jaeger.statusbarutil:library:1.4.0'
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     compile 'com.zaaach:toprightmenu:1.1.2'
     compile 'com.tuyenmonkey:mkloader:1.4.0'

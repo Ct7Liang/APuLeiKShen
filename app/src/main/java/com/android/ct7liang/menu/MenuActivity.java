@@ -5,8 +5,9 @@ import android.view.View;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
-import com.android.ct7liang.menu.contextMenu.ContextMenuActivity;
 import com.android.ct7liang.menu.boomMenu.BoomMenuActivity;
+import com.android.ct7liang.menu.contextMenu.ContextMenuActivity;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class MenuActivity extends BaseActivity {
 
@@ -17,8 +18,15 @@ public class MenuActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         findViewById(R.id.boom).setOnClickListener(this);
         findViewById(R.id.context_menu).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

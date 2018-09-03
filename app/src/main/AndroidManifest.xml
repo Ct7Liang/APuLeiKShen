@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest  xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.ct7liang">
 
     <!-- zxing二维码扫描 -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -18,7 +16,6 @@
 
     <!-- 读取通讯录权限 -->
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
-
 
     <application
         android:name=".BaseApp"
@@ -187,7 +184,6 @@
         <activity android:name=".login_page.LoginBActivity" />
         <activity android:name=".login_page.LoginCActivity" />
         <activity android:name=".login_page.LoginDActivity" />
-        <activity android:name=".login_page.LoginEActivity" />
         <!-- 附带弹出效果的悬浮菜单按钮 -->
         <activity android:name=".menu.MenuActivity" />
         <activity android:name=".menu.boomMenu.BoomMenuActivity" />
@@ -227,7 +223,8 @@
         <activity android:name=".html.HtmlDetailActivity" />
         <activity android:name=".html.ZPActivity" />
         <activity android:name=".getContacts.GetContactsActivity" />
-        <activity android:name=".gsyVideoPlayer.GsyVideoPlayerActivity"></activity>
+        <activity android:name=".gsyVideoPlayer.GsyVideoPlayerActivity" />
+        <activity android:name=".watches.WatchesActivity" />
     </application>
 
 </manifest>

@@ -1,11 +1,12 @@
 package com.android.ct7liang.switch_button;
 
 import android.view.View;
-import android.widget.TextView;
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 import com.ct7liang.tangyuan.utils.ToastUtils;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 import com.suke.widget.SwitchButton;
+
 
 public class SwitchButtonActivity extends BaseActivity {
 
@@ -16,14 +17,17 @@ public class SwitchButtonActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
-        ((TextView)findViewById(R.id.title)).setText("SwitchButton");
+        initStatusBar();
     }
 
     @Override
-    public void initData() {
-
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
+
+    @Override
+    public void initData() {}
 
     @Override
     public void initView() {
@@ -38,16 +42,8 @@ public class SwitchButtonActivity extends BaseActivity {
     }
 
     @Override
-    public void initFinish() {
-
-    }
+    public void initFinish() {}
 
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
-        }
-    }
+    public void onClick(View view) {}
 }

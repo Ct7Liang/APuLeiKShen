@@ -7,6 +7,7 @@ import android.widget.EditText;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class SoftActivity extends BaseActivity {
 
@@ -20,12 +21,19 @@ public class SoftActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         editText = findViewById(R.id.et_edit_text);
         editText01 = findViewById(R.id.et_edit_text_01);
         findViewById(R.id.close_01).setOnClickListener(this);
         findViewById(R.id.close).setOnClickListener(this);
         findViewById(R.id.open_01).setOnClickListener(this);
         findViewById(R.id.open).setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override

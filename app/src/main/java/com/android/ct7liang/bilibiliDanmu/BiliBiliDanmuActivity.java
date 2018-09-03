@@ -5,13 +5,12 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 import java.io.InputStream;
 import java.util.HashMap;
-
 import master.flame.danmaku.controller.IDanmakuView;
 import master.flame.danmaku.danmaku.loader.ILoader;
 import master.flame.danmaku.danmaku.loader.IllegalDataException;
@@ -25,6 +24,7 @@ import master.flame.danmaku.danmaku.model.android.Danmakus;
 import master.flame.danmaku.danmaku.parser.BaseDanmakuParser;
 import master.flame.danmaku.danmaku.parser.IDataSource;
 import master.flame.danmaku.ui.widget.DanmakuView;
+
 
 public class BiliBiliDanmuActivity extends BaseActivity {
 
@@ -40,6 +40,7 @@ public class BiliBiliDanmuActivity extends BaseActivity {
 
     @Override
     public void findView() {
+        initStatusBar();
         danmakuView = findViewById(R.id.DanMuKuView);
         comment = findViewById(R.id.comment);
         findViewById(R.id.rtl).setOnClickListener(this);
@@ -48,11 +49,15 @@ public class BiliBiliDanmuActivity extends BaseActivity {
         findViewById(R.id.bottom).setOnClickListener(this);
         findViewById(R.id.jiao).setOnClickListener(this);
         findViewById(R.id.high).setOnClickListener(this);
-        findViewById(R.id.back).setOnClickListener(this);
         findViewById(R.id.enter).setOnClickListener(this);
         initDanmaKuView();
     }
 
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
 
     @Override
     public void initData() {
@@ -72,9 +77,6 @@ public class BiliBiliDanmuActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
             case R.id.enter:
                 startActivity(new Intent(mAct, MyDanmuActivity.class));
                 break;

@@ -18,13 +18,10 @@ public class LoginBActivity extends BaseActivity {
         return R.layout.activity_login_b;
     }
 
-    @Override
-    protected void setStatusBar() {
-
-    }
 
     @Override
     public void findView() {
+        initStatusBar();
         image = findViewById(R.id.image);
         new Handler().postDelayed(new Runnable() {
             @Override

@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.android.ct7liang.R;
-import com.jaeger.library.StatusBarUtil;
 
 public class CustomScrollingActivity extends AppCompatActivity implements View.OnClickListener, AppBarLayout.OnOffsetChangedListener {
 
@@ -27,7 +26,6 @@ public class CustomScrollingActivity extends AppCompatActivity implements View.O
 //        StatusBarUtil.setColor(this, getResources().getColor(R.color.AppThemeColor), 0);
 //        StatusBarUtil.setTranslucent(this, 0);
 //        StatusBarUtil.setTransparent(this);
-        StatusBarUtil.setTranslucentForCoordinatorLayout(this, 18);
 
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);

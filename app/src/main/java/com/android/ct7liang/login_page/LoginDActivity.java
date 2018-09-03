@@ -3,7 +3,6 @@ package com.android.ct7liang.login_page;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.View;
-import android.view.WindowManager;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
@@ -24,12 +23,8 @@ public class LoginDActivity extends BaseActivity {
     }
 
     @Override
-    protected void setStatusBar() {
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    }
-
-    @Override
     public void findView() {
+        initStatusBar();
         mVideoView = (CommonVideoView)findViewById(R.id.commonVideoView);
         top = findViewById(R.id.top);
         findViewById(R.id.login).setOnClickListener(this);

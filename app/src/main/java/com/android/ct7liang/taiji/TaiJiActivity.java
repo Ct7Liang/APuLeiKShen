@@ -6,6 +6,7 @@ import android.view.animation.AnimationUtils;
 
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
+import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
 public class TaiJiActivity extends BaseActivity {
 
@@ -18,9 +19,15 @@ public class TaiJiActivity extends BaseActivity {
 
     @Override
     public void findView() {
-        findViewById(R.id.back).setOnClickListener(this);
+        initStatusBar();
         mTaiJi = (TaiJiView) findViewById(R.id.taiJi);
         mTaiJi.setOnClickListener(this);
+    }
+
+    @Override
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -35,9 +42,6 @@ public class TaiJiActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.back:
-                finish();
-                break;
             case R.id.taiJi:
                 Animation animation = AnimationUtils.loadAnimation(TaiJiActivity.this, R.anim.taiji_rotate);
                 mTaiJi.startAnimation(animation);//开始动画

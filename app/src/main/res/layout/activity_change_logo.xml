@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context="com.android.ct7liang.changeLogo.ChangeLogoActivity">
 
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title_gravity="start"
+        app:title="更改App图标"
+        app:title_text_size="16sp">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
+
     <LinearLayout
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal">
         <Button
             android:id="@+id/resume_icon"
@@ -49,4 +61,4 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

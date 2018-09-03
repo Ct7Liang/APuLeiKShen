@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.android.ct7liang.addressSelect.AddressSelectActivity">
 
-    <include layout="@layout/app_title_layout"/>
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar_view"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:left_img_padding="16dp"
+        app:title_gravity="center"
+        app:title_text_size="16sp"
+        app:title="自定义地址三级联动选择器">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <Button
         android:layout_marginLeft="25dp"

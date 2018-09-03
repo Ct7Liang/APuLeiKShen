@@ -7,7 +7,16 @@
     android:orientation="vertical"
     tools:context="com.android.ct7liang.loading.LoadingActivity">
 
-    <include layout="@layout/app_title_layout"/>
+    <com.ct7liang.tangyuan.view_titlebar.TitleBarView
+        android:id="@+id/title_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_bar_bg="@color/AppThemeColor"
+        app:title_gravity="center"
+        app:left_img_padding="16dp"
+        app:title_text_size="16sp"
+        app:title="加载视图">
+    </com.ct7liang.tangyuan.view_titlebar.TitleBarView>
 
     <ScrollView
         android:scrollbars="none"
