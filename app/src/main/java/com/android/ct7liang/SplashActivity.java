@@ -28,7 +28,7 @@ public class SplashActivity extends BaseActivity {
     @Override
     public void findView() {
         ImageView image = (ImageView) findViewById(R.id.image);
-        image.setImageResource(R.drawable.splash_img_01);
+        image.setImageResource(R.mipmap.splash_img);
     }
 
     @Override
