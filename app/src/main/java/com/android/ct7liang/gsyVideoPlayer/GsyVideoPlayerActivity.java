@@ -64,8 +64,10 @@ public class GsyVideoPlayerActivity extends GSYBaseActivityDetail<StandardGSYVid
     public GSYVideoOptionBuilder getGSYVideoOptionBuilder() {
         return new GSYVideoOptionBuilder()
                 .setUrl("rtsp://admin:admin123@172.18.0.200:554/cam/realmonitor?channel=1&subtype=0")
+//                .setUrl("rtsp://192.168.43.74:8554/123")
+//                .setUrl("rtsp://192.168.43.74:8554/12345")
                 .setCacheWithPlay(true)
-                .setVideoTitle(" ")
+                .setVideoTitle(" 21211 ")
                 .setIsTouchWiget(true)
                 .setRotateViewAuto(false)
                 .setLockLand(false)

@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
 
     <!-- 读取通讯录权限 -->
@@ -162,20 +164,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <!-- 选择按钮 -->
         <activity android:name=".switch_button.SwitchButtonActivity" />
-        <!-- 沉浸式状态栏 -->
-        <activity android:name=".status_bar.StatusBarCategoryActivity" />
-        <activity android:name=".status_bar.StatusBarAActivity" />
-        <activity android:name=".status_bar.StatusBarBActivity" />
-        <activity android:name=".status_bar.StatusBarCActivity" />
-        <activity android:name=".status_bar.StatusBarDActivity" />
-        <activity
-            android:name=".status_bar.StatusBarEActivity"
-            android:label="@string/title_activity_status_bar_e"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".status_bar.StatusBarFActivity"
-            android:label="@string/title_activity_status_bar_f"
-            android:theme="@style/AppTheme.NoActionBar" />
         <!-- 图片模糊 -->
         <activity android:name=".imageBlur.ImageBlurActivity" />
         <!-- 登录界面 -->
