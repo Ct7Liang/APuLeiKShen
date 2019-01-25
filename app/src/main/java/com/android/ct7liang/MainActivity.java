@@ -24,14 +24,12 @@ import com.android.ct7liang.imageView_scaleType.ImageViewScaleTypeActivity;
 import com.android.ct7liang.loading.LoadingActivity;
 import com.android.ct7liang.login_page.LoginCategoryActivity;
 import com.android.ct7liang.menu.MenuActivity;
-import com.android.ct7liang.refresh.QQRefreshActivity;
 import com.android.ct7liang.soft_broad_case.SoftActivity;
 import com.android.ct7liang.switch_button.SwitchButtonActivity;
 import com.android.ct7liang.taiji.TaiJiActivity;
 import com.android.ct7liang.taskStack.TaskStackActivity;
 import com.android.ct7liang.view_flipper.ViewFlipperActivity;
 import com.android.ct7liang.watches.WatchesActivity;
-import com.android.ct7liang.web_view.WebViewTestActivity;
 import com.android.ct7liang.zxing.ZXingActivity;
 import com.ct7liang.tangyuan.view_titlebar.TitleBarView;
 
@@ -57,8 +55,6 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("ViewFlipper", ViewFlipperActivity.class),
         new MainItemBean("Activity的生命周期", ActivityLifecycleActivity.class),
         new MainItemBean("Activity的启动模式", TaskStackActivity.class),
-        new MainItemBean("WebView - android与H5交互", WebViewTestActivity.class),
-        new MainItemBean("刷新页面", QQRefreshActivity.class),
         new MainItemBean("加载本地静态Html页面", HtmlSelectActivity.class),
         new MainItemBean("获取手机通话记录", GetContactsActivity.class),
         new MainItemBean("使用GSYVideoPlayer", GsyVideoPlayerActivity.class),
@@ -138,4 +134,3 @@ public class MainActivity extends BaseActivity {
     }
 
 }
-//141
