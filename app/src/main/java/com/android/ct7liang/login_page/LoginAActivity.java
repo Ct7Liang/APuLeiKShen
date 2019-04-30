@@ -18,7 +18,7 @@ public class LoginAActivity extends BaseActivity{
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         image = findViewById(R.id.image);
         new Handler().postDelayed(new Runnable() {
@@ -28,21 +28,6 @@ public class LoginAActivity extends BaseActivity{
                 image.startAnimation(animation);
             }
         }, 500);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

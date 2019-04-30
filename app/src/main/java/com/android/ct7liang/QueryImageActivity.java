@@ -29,10 +29,6 @@ public class QueryImageActivity extends BaseActivity implements PhotoViewAttache
         context.startActivity(i);
     }
 
-    @Override
-    public void findView() {
-        viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
-    }
 
     @Override
     public int setLayout() {
@@ -47,13 +43,12 @@ public class QueryImageActivity extends BaseActivity implements PhotoViewAttache
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
+        viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
+
         urls = getIntent().getStringArrayListExtra("list");
         position = getIntent().getIntExtra("position", 0);
-    }
 
-    @Override
-    public void initView() {
         viewPager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
@@ -79,10 +74,6 @@ public class QueryImageActivity extends BaseActivity implements PhotoViewAttache
         viewPager.setCurrentItem(position);
     }
 
-    @Override
-    public void initFinish() {
-
-    }
 
     @Override
     public void onClick(View v) {

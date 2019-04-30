@@ -17,12 +17,7 @@ public class TaiJiActivity extends BaseActivity {
         return R.layout.activity_taiji;
     }
 
-    @Override
-    public void findView() {
-        initStatusBar();
-        mTaiJi = (TaiJiView) findViewById(R.id.taiJi);
-        mTaiJi.setOnClickListener(this);
-    }
+
 
     @Override
     protected void setStatusBar() {
@@ -31,13 +26,13 @@ public class TaiJiActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {}
+    public void initSurface() {
+        initStatusBar();
+        mTaiJi = (TaiJiView) findViewById(R.id.taiJi);
+        mTaiJi.setOnClickListener(this);
+    }
 
-    @Override
-    public void initView() {}
 
-    @Override
-    public void initFinish() {}
 
     @Override
     public void onClick(View view) {

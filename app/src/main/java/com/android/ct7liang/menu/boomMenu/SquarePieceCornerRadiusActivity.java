@@ -24,7 +24,7 @@ public class SquarePieceCornerRadiusActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         //查找控件
         BoomMenuButton boomMenuButton = (BoomMenuButton) findViewById(R.id.boom);
@@ -33,9 +33,9 @@ public class SquarePieceCornerRadiusActivity extends BaseActivity {
             //根据菜单选项的数目 添加相同数量的builder 设置图标
             boomMenuButton.addBuilder(
                     new SimpleCircleButton.Builder()
-                    .isRound(false)
-                    .buttonCornerRadius(20)
-                    .shadowCornerRadius(20)
+                            .isRound(false)
+                            .buttonCornerRadius(20)
+                            .shadowCornerRadius(20)
             );
         }
 
@@ -66,21 +66,6 @@ public class SquarePieceCornerRadiusActivity extends BaseActivity {
                             .normalText("这是第"+i+"个")
             );
         }
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

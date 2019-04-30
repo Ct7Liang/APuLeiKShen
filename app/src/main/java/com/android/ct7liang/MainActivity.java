@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.android.ct7liang.activityLifecycle.ActivityLifecycleActivity;
 import com.android.ct7liang.addressSelect.AddressSelectActivity;
+import com.android.ct7liang.android_gif_drawable.GifDrawableActivity;
 import com.android.ct7liang.bankCardCheck.CheckBankCardActivity;
 import com.android.ct7liang.bilibiliDanmu.BiliBiliDanmuActivity;
 import com.android.ct7liang.changeLogo.ChangeLogoActivity;
@@ -58,7 +59,8 @@ public class MainActivity extends BaseActivity {
         new MainItemBean("加载本地静态Html页面", HtmlSelectActivity.class),
         new MainItemBean("获取手机通话记录", GetContactsActivity.class),
         new MainItemBean("使用GSYVideoPlayer", GsyVideoPlayerActivity.class),
-        new MainItemBean("自定义 - 钟表", WatchesActivity.class)
+        new MainItemBean("自定义 - 钟表", WatchesActivity.class),
+        new MainItemBean("android-gif-drawable - Gif控件", GifDrawableActivity.class),
     };
 
     @Override
@@ -67,7 +69,20 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+        titleBarView.setOnLeftImgClick(new TitleBarView.OnLeftImgClick() {
+            @Override
+            public void onClick(View view) {
+                exitApp();
+            }
+        });
+    }
+
+    @Override
+    public void initSurface() {
+        initStatusBar();
         ListView listView = findViewById(R.id.menuList);
         listView.setAdapter(new BaseAdapter() {
             @Override
@@ -101,29 +116,6 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
-
-    @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {
-        initStatusBar();
-    }
-
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-        titleBarView.setOnLeftImgClick(new TitleBarView.OnLeftImgClick() {
-            @Override
-            public void onClick(View view) {
-                exitApp();
-            }
-        });
-    }
-
-    @Override
-    public void initFinish() {}
 
     @Override
     public void onClick(View v) {}

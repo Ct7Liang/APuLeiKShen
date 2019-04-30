@@ -15,27 +15,18 @@ public class ScrollTypeActivity extends BaseActivity{
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-        findViewById(R.id.a).setOnClickListener(this);
-        findViewById(R.id.c).setOnClickListener(this);
-        findViewById(R.id.b).setOnClickListener(this);
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView title = findViewById(R.id.title_bar_view);
         title.setStatusBar(this);
     }
 
     @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {}
+    public void initSurface() {
+        initStatusBar();
+        findViewById(R.id.a).setOnClickListener(this);
+        findViewById(R.id.c).setOnClickListener(this);
+        findViewById(R.id.b).setOnClickListener(this);
+    }
 
     @Override
     public void onClick(View view) {

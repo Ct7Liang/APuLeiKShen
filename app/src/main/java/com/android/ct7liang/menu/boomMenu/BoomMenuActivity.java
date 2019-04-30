@@ -15,19 +15,19 @@ public class BoomMenuActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         initStatusBar();
         findViewById(R.id.simple_circle_button).setOnClickListener(this);
         findViewById(R.id.inside_circle_button).setOnClickListener(this);
         findViewById(R.id.outside_circle_button).setOnClickListener(this);
         findViewById(R.id.ham_button).setOnClickListener(this);
         findViewById(R.id.square_and_piece_corner_radius).setOnClickListener(this);
-    }
-
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
     }
 
     @Override
@@ -50,14 +50,4 @@ public class BoomMenuActivity extends BaseActivity {
                 break;
         }
     }
-
-    @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {}
-
 }

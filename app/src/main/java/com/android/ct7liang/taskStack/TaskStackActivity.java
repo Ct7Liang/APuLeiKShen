@@ -15,7 +15,13 @@ public class TaskStackActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         findViewById(R.id.standard).setOnClickListener(this);
         findViewById(R.id.singleTop).setOnClickListener(this);
         findViewById(R.id.singleTask).setOnClickListener(this);
@@ -23,26 +29,6 @@ public class TaskStackActivity extends BaseActivity {
         initStatusBar();
     }
 
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
-    }
 
     @Override
     public void onClick(View view) {

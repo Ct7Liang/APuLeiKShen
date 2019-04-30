@@ -16,21 +16,15 @@ public class SwitchButtonActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {}
+    public void initSurface() {
+        initStatusBar();
 
-    @Override
-    public void initView() {
         SwitchButton switchButton = findViewById(R.id.switch_button);
         switchButton.setChecked(false);
         switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
@@ -41,8 +35,7 @@ public class SwitchButtonActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public void initFinish() {}
+
 
     @Override
     public void onClick(View view) {}

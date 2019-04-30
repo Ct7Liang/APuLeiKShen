@@ -23,29 +23,16 @@ public class LoginDActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         mVideoView = (CommonVideoView)findViewById(R.id.commonVideoView);
         top = findViewById(R.id.top);
         findViewById(R.id.login).setOnClickListener(this);
-    }
 
-    @Override
-    public void initData() {
         file = new File(AppFolder.get(), "login_video");
         if (!file.exists()){
             file.mkdirs();
         }
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

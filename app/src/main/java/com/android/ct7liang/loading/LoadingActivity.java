@@ -13,29 +13,14 @@ public class LoadingActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
+    public void initSurface() {
+        initStatusBar();
     }
 
     @Override

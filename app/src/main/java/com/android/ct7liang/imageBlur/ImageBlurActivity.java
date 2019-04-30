@@ -30,28 +30,13 @@ public class ImageBlurActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         imageView = (ImageView)findViewById(R.id.image);
         edit_a = findViewById(R.id.number_a);
         edit_b = findViewById(R.id.number_b);
         findViewById(R.id.blur).setOnClickListener(this);
         findViewById(R.id.resume).setOnClickListener(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

@@ -15,32 +15,18 @@ public class LoginCategoryActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        findViewById(R.id.a).setOnClickListener(this);
-        findViewById(R.id.b).setOnClickListener(this);
-        findViewById(R.id.c).setOnClickListener(this);
-        findViewById(R.id.d).setOnClickListener(this);
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
         initStatusBar();
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
+        findViewById(R.id.a).setOnClickListener(this);
+        findViewById(R.id.b).setOnClickListener(this);
+        findViewById(R.id.c).setOnClickListener(this);
+        findViewById(R.id.d).setOnClickListener(this);
     }
 
     @Override

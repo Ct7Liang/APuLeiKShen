@@ -30,30 +30,22 @@ public class ActivityLifecycleActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        A = findViewById(R.id.a);
-        findViewById(R.id.btn).setOnClickListener(this);
-        findViewById(R.id.image).setOnClickListener(this);
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {}
+    public void initSurface() {
+        A = findViewById(R.id.a);
+        findViewById(R.id.btn).setOnClickListener(this);
+        findViewById(R.id.image).setOnClickListener(this);
+        initStatusBar();
 
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {
         list = new ArrayList<>();
         list.add(R.mipmap.activity_live_image);
     }
+
 
     @Override
     public void onClick(View view) {

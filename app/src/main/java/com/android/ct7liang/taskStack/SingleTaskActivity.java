@@ -14,11 +14,6 @@ public class SingleTaskActivity extends BaseActivity {
         return R.layout.activity_single_task;
     }
 
-    @Override
-    public void findView() {
-        findViewById(R.id.btn).setOnClickListener(this);
-        initStatusBar();
-    }
 
     @Override
     protected void setStatusBar() {
@@ -27,18 +22,9 @@ public class SingleTaskActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
+    public void initSurface() {
+        findViewById(R.id.btn).setOnClickListener(this);
+        initStatusBar();
     }
 
     @Override

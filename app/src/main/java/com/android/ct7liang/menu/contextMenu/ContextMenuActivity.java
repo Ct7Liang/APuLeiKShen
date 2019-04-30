@@ -31,17 +31,6 @@ public class ContextMenuActivity extends BaseActivity implements OnMenuItemClick
         return R.layout.activity_context_menu;
     }
 
-    @Override
-    public void findView() {
-        initStatusBar();
-        et_delay = findViewById(R.id.delay);
-        et_duration = findViewById(R.id.duration);
-        cb_fitSystemWindow = findViewById(R.id.fitSystemWindow);
-        cb_clipToPadding = findViewById(R.id.clipToPadding);
-        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
-        ((TextView)findViewById(R.id.center_text)).setText("ContextMenu");
-        ((ImageView)findViewById(R.id.right_image)).setImageResource(R.mipmap.top_title_more);
-    }
 
     @Override
     protected void setStatusBar() {
@@ -68,16 +57,22 @@ public class ContextMenuActivity extends BaseActivity implements OnMenuItemClick
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
+        initStatusBar();
+        et_delay = findViewById(R.id.delay);
+        et_duration = findViewById(R.id.duration);
+        cb_fitSystemWindow = findViewById(R.id.fitSystemWindow);
+        cb_clipToPadding = findViewById(R.id.clipToPadding);
+        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
+        ((TextView)findViewById(R.id.center_text)).setText("ContextMenu");
+        ((ImageView)findViewById(R.id.right_image)).setImageResource(R.mipmap.top_title_more);
+
         actionBarHeight = 0;
         TypedValue tv = new TypedValue();
         if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
             actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
         }
-    }
 
-    @Override
-    public void initView() {
         menuObjects = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             MenuObject menuObject = new MenuObject();
@@ -111,11 +106,6 @@ public class ContextMenuActivity extends BaseActivity implements OnMenuItemClick
             }
             menuObjects.add(menuObject);
         }
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

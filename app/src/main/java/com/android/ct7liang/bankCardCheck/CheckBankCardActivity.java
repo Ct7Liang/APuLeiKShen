@@ -23,34 +23,20 @@ public class CheckBankCardActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-        edit = findViewById(R.id.edit);
-        findViewById(R.id.check).setOnClickListener(this);
-        findViewById(R.id.img_a).setOnClickListener(this);
-        findViewById(R.id.img_b).setOnClickListener(this);
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
+        initStatusBar();
+        edit = findViewById(R.id.edit);
+        findViewById(R.id.check).setOnClickListener(this);
+        findViewById(R.id.img_a).setOnClickListener(this);
+        findViewById(R.id.img_b).setOnClickListener(this);
         list.add(R.mipmap.luhn01);
         list.add(R.mipmap.luhn02);
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

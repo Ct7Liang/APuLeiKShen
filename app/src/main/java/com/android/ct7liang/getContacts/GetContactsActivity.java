@@ -18,30 +18,16 @@ public class GetContactsActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
+    public void initSurface() {
+        initStatusBar();
         findViewById(R.id.btn).setOnClickListener(this);
         tv = findViewById(R.id.tv);
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

@@ -19,8 +19,15 @@ public class SoftActivity extends BaseActivity {
         return R.layout.activity_edit_text;
     }
 
+
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         initStatusBar();
         editText = findViewById(R.id.et_edit_text);
         editText01 = findViewById(R.id.et_edit_text_01);
@@ -30,27 +37,6 @@ public class SoftActivity extends BaseActivity {
         findViewById(R.id.open).setOnClickListener(this);
     }
 
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
-
-    }
 
     @Override
     public void onClick(View view) {

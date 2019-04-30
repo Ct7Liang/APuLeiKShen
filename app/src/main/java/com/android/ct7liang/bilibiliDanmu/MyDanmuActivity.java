@@ -35,7 +35,13 @@ public class MyDanmuActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         initStatusBar();
         danmakuView = findViewById(R.id.DanMuKuView);
         comment = findViewById(R.id.comment);
@@ -47,21 +53,6 @@ public class MyDanmuActivity extends BaseActivity {
         findViewById(R.id.high).setOnClickListener(this);
         initDanmaKuView();
     }
-
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {}
 
     @Override
     public void onClick(View view) {

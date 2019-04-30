@@ -15,13 +15,6 @@ public class StandardActivity extends BaseActivity {
     }
 
 
-
-    @Override
-    public void findView() {
-        findViewById(R.id.btn).setOnClickListener(this);
-        initStatusBar();
-    }
-
     @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
@@ -29,18 +22,9 @@ public class StandardActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
+    public void initSurface() {
+        findViewById(R.id.btn).setOnClickListener(this);
+        initStatusBar();
     }
 
     @Override

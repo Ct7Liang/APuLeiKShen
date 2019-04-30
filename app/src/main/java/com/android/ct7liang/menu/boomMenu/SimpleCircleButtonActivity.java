@@ -33,7 +33,7 @@ public class SimpleCircleButtonActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         //查找控件
         BoomMenuButton boomMenuButton = (BoomMenuButton) findViewById(boom);
@@ -113,15 +113,6 @@ public class SimpleCircleButtonActivity extends BaseActivity {
 
 //        boomMenuButton.setUse3DTransformAnimation(true);  是否使用3D动画
     }
-
-    @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {}
 
     @Override
     public void onClick(View view) {}

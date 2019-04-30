@@ -59,22 +59,13 @@ public class WatchesActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         setFullScreen();
         second = findViewById(R.id.second);
         minute = findViewById(R.id.minute);
         hour = findViewById(R.id.hour);
         second_end = findViewById(R.id.second_end);
-    }
 
-    @Override
-    public void initData() {}
-
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {
         String[] split = new SimpleDateFormat("HH:mm:ss", Locale.CHINA).format(new Date()).split(":");
 //        String[] split = {"23", "59", "55"};
         int s = Integer.parseInt(split[2]);
@@ -91,6 +82,7 @@ public class WatchesActivity extends BaseActivity {
         //设置时针针位置
         setHour();
     }
+
 
     @Override
     public void onClick(View view) {}

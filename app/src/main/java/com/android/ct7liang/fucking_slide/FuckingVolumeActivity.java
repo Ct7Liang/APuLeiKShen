@@ -21,26 +21,17 @@ public class FuckingVolumeActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        mVolumeSliderView = (VolumeSliderView) findViewById(R.id.fucking);
-        tv = (TextView) findViewById(R.id.tv);
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {}
+    public void initSurface() {
+        mVolumeSliderView = (VolumeSliderView) findViewById(R.id.fucking);
+        tv = (TextView) findViewById(R.id.tv);
+        initStatusBar();
 
-    @Override
-    public void initView() {}
-
-    @Override
-    public void initFinish() {
         mAm = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
         int streamVolume = mAm.getStreamVolume(AudioManager.STREAM_MUSIC);
         final int maxVolume = mAm.getStreamMaxVolume(AudioManager.STREAM_MUSIC);

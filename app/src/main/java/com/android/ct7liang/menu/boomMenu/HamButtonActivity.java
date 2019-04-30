@@ -20,7 +20,13 @@ public class HamButtonActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         initStatusBar();
 
         //查找控件
@@ -55,28 +61,6 @@ public class HamButtonActivity extends BaseActivity {
 
         //设置boomMenuButton是否可以拖动
         boomMenuButton.setDraggable(true);
-    }
-
-
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

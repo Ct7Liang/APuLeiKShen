@@ -21,24 +21,17 @@ public class HtmlDetailActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-        webView = findViewById(R.id.webView);
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
+        initStatusBar();
+        webView = findViewById(R.id.webView);
         loadurl = getIntent().getStringExtra("url");
-    }
 
-    @Override
-    public void initView() {
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -61,11 +54,6 @@ public class HtmlDetailActivity extends BaseActivity {
         if (loadurl!=null){
             webView.loadUrl(loadurl);
         }
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

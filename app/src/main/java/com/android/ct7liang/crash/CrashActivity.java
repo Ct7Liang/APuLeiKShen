@@ -24,15 +24,6 @@ public class CrashActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        findViewById(R.id.a).setOnClickListener(this);
-        findViewById(R.id.b).setOnClickListener(this);
-        findViewById(R.id.c).setOnClickListener(this);
-        findViewById(R.id.d).setOnClickListener(this);
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         super.setStatusBar();
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
@@ -40,18 +31,12 @@ public class CrashActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
+    public void initSurface() {
+        findViewById(R.id.a).setOnClickListener(this);
+        findViewById(R.id.b).setOnClickListener(this);
+        findViewById(R.id.c).setOnClickListener(this);
+        findViewById(R.id.d).setOnClickListener(this);
+        initStatusBar();
     }
 
     @Override

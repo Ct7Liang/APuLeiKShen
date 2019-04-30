@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "27.0.0"
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.ct7liang"
-        minSdkVersion 16
-        targetSdkVersion 22
+        minSdkVersion 17
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,10 +19,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     /**
      *  二维码扫描
      *  compile 'cn.yipianfengye.android:zxing-library:2.2'
@@ -70,26 +66,27 @@ dependencies {
      *  https://github.com/CarGuo/GSYVideoPlayer
      */
 
-    compile project(':fucking_volume_slider')
-    compile 'com.android.support:appcompat-v7:25+'
-    compile 'com.android.support:design:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0'
-    compile 'com.github.Ct7Liang:tangyuan:1.1.7'
-    compile 'com.github.Ct7Liang:Regional:1.0.3'
-    compile 'cn.yipianfengye.android:zxing-library:2.2'
-    compile 'cat.ereza:customactivityoncrash:2.2.0'
-    compile 'com.github.chrisbanes:PhotoView:1.2.6'
-    compile 'com.zaaach:toprightmenu:1.1.2'
-    compile 'com.tuyenmonkey:mkloader:1.4.0'
-    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
-    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
-    compile 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
-    compile 'com.github.ctiao:ndkbitmap-x86:0.9.21'
-    compile 'com.github.zcweng:switch-button:0.0.3@aar'
-    compile 'jp.wasabeef:blurry:2.1.1'
-    compile 'com.github.Nightonke:BoomMenu:e20b5ea52d'
-    compile 'com.yalantis:contextmenu:1.0.7'
-    compile 'com.shuyu:gsyVideoPlayer-java:5.0.2'
-    compile 'com.shuyu:gsyVideoPlayer-ex_so:5.0.2'
-    testCompile 'junit:junit:4.12'
+    implementation project(':fucking_volume_slider')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.github.Ct7Liang:tangyuan:2.0.1'
+    implementation 'com.github.Ct7Liang:Regional:1.0.3'
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    implementation 'com.zaaach:toprightmenu:1.1.2'
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    implementation 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
+    implementation 'com.github.ctiao:ndkbitmap-armv5:0.9.21'
+    implementation 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'jp.wasabeef:blurry:2.1.1'
+    implementation 'com.github.Nightonke:BoomMenu:e20b5ea52d'
+    implementation 'com.yalantis:contextmenu:1.0.7'
+    implementation 'com.shuyu:gsyVideoPlayer-java:5.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-ex_so:5.0.2'
+    implementation 'com.github.koral--:android-gif-drawable:v1.2.16'
+    androidTestImplementation 'junit:junit:4.12'
 }

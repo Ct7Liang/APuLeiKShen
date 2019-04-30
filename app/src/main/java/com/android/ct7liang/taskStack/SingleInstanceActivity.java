@@ -15,12 +15,6 @@ public class SingleInstanceActivity extends BaseActivity {
     }
 
 
-
-    @Override
-    public void findView() {
-        initStatusBar();
-    }
-
     @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
@@ -28,19 +22,10 @@ public class SingleInstanceActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
+    public void initSurface() {
+        initStatusBar();
     }
 
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
-    }
 
     @Override
     public void onClick(View view) {

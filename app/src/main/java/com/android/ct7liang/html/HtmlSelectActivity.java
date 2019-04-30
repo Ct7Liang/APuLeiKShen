@@ -15,30 +15,16 @@ public class HtmlSelectActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
     }
 
     @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
+    public void initSurface() {
+        initStatusBar();
         findViewById(R.id.yqh).setOnClickListener(this);
         findViewById(R.id.zp).setOnClickListener(this);
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

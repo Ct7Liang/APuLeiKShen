@@ -26,23 +26,10 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         ImageView image = (ImageView) findViewById(R.id.image);
         image.setImageResource(R.mipmap.splash_img);
-    }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
         activity = this;
         handler.sendEmptyMessageDelayed(0, 4500);
     }

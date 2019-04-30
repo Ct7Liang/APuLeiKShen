@@ -65,7 +65,13 @@ public class ChangeLogoActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         initStatusBar();
         findViewById(R.id.resume_icon).setOnClickListener(this);
         findViewById(R.id.change_icon_01).setOnClickListener(this);
@@ -74,27 +80,6 @@ public class ChangeLogoActivity extends BaseActivity {
         findViewById(R.id.change_icon_04).setOnClickListener(this);
         findViewById(R.id.change_icon_05).setOnClickListener(this);
         findViewById(R.id.change_icon_06).setOnClickListener(this);
-    }
-
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

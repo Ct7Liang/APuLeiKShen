@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
 import com.android.ct7liang.BaseActivity;
 import com.android.ct7liang.R;
 
@@ -18,9 +17,8 @@ public class LoginBActivity extends BaseActivity {
         return R.layout.activity_login_b;
     }
 
-
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         image = findViewById(R.id.image);
         new Handler().postDelayed(new Runnable() {
@@ -30,21 +28,6 @@ public class LoginBActivity extends BaseActivity {
                 image.startAnimation(animation);
             }
         }, 500);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

@@ -26,7 +26,7 @@ public class TextOutSideCircleButtonActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    public void initSurface() {
         initStatusBar();
         //查找控件
         BoomMenuButton boomMenuButton = (BoomMenuButton) findViewById(R.id.boom);
@@ -54,21 +54,6 @@ public class TextOutSideCircleButtonActivity extends BaseActivity {
                 boomMenuButton.addBuilder(new TextOutsideCircleButton.Builder().normalText("this is a 这是第"+i+"个"));
             }
         }
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
-
-    }
-
-    @Override
-    public void initFinish() {
-
     }
 
     @Override

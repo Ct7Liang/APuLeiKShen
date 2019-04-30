@@ -33,22 +33,6 @@ public class ImageViewScaleTypeActivity extends BaseActivity implements TitleBar
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-
-        test = findViewById(R.id.right_image);
-
-        image = findViewById(R.id.imageView);
-        image.setImageResource(imgResource[imgIndex]);
-        image.setOnClickListener(this);
-        //添加菜单项
-        menuItems = new ArrayList<>();
-        for (int i = 0; i < types.length; i++) {
-            menuItems.add(new MenuItem(types[i]));
-        }
-    }
-
-    @Override
     protected void setStatusBar() {
         titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
@@ -75,13 +59,21 @@ public class ImageViewScaleTypeActivity extends BaseActivity implements TitleBar
     }
 
     @Override
-    public void initData() {}
+    public void initSurface() {
+        initStatusBar();
 
-    @Override
-    public void initView() {}
+        test = findViewById(R.id.right_image);
 
-    @Override
-    public void initFinish() {}
+        image = findViewById(R.id.imageView);
+        image.setImageResource(imgResource[imgIndex]);
+        image.setOnClickListener(this);
+        //添加菜单项
+        menuItems = new ArrayList<>();
+        for (int i = 0; i < types.length; i++) {
+            menuItems.add(new MenuItem(types[i]));
+        }
+    }
+
 
     @Override
     public void onClick(View view) {

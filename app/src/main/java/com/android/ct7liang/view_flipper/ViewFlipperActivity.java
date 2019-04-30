@@ -38,27 +38,10 @@ public class ViewFlipperActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        initStatusBar();
-        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
-        findViewById(R.id.left_image).setOnClickListener(this);
-        ((TextView)findViewById(R.id.center_text)).setText("FlipperView");
-        findViewById(R.id.btn_oc).setOnClickListener(this);
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
-    }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initView() {
         //设置FlipperView
         flipperView = findViewById(R.id.filpper);
         flipperView.setFlipInterval(2000);
@@ -78,8 +61,12 @@ public class ViewFlipperActivity extends BaseActivity {
     }
 
     @Override
-    public void initFinish() {
-
+    public void initSurface() {
+        initStatusBar();
+        findViewById(R.id.title_back_ground).setBackgroundResource(R.color.AppThemeColor);
+        findViewById(R.id.left_image).setOnClickListener(this);
+        ((TextView)findViewById(R.id.center_text)).setText("FlipperView");
+        findViewById(R.id.btn_oc).setOnClickListener(this);
     }
 
     @Override

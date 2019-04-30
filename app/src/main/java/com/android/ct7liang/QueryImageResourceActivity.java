@@ -30,11 +30,6 @@ public class QueryImageResourceActivity extends BaseActivity implements PhotoVie
     }
 
     @Override
-    public void findView() {
-        viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
-    }
-
-    @Override
     public int setLayout() {
         return R.layout.activity_query_image;
     }
@@ -47,13 +42,12 @@ public class QueryImageResourceActivity extends BaseActivity implements PhotoVie
     }
 
     @Override
-    public void initData() {
+    public void initSurface() {
+        viewPager = (ViewPagerFixed) findViewById(R.id.view_pager);
+
         urls = getIntent().getIntegerArrayListExtra("list");
         position = getIntent().getIntExtra("position", 0);
-    }
 
-    @Override
-    public void initView() {
         viewPager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
@@ -79,8 +73,6 @@ public class QueryImageResourceActivity extends BaseActivity implements PhotoVie
         viewPager.setCurrentItem(position);
     }
 
-    @Override
-    public void initFinish() {}
 
     @Override
     public void onClick(View v) {}

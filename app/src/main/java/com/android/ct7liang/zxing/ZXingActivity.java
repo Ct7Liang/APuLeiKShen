@@ -52,7 +52,13 @@ public class ZXingActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
+    protected void setStatusBar() {
+        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
+        titleBarView.setStatusBar(this);
+    }
+
+    @Override
+    public void initSurface() {
         text = (TextView) findViewById(R.id.text);
         image = (ImageView) findViewById(R.id.image);
         editText = (EditText) findViewById(R.id.edit_text);
@@ -63,28 +69,11 @@ public class ZXingActivity extends BaseActivity {
         findViewById(R.id.my_style_scan).setOnClickListener(this);
         findViewById(R.id.save).setOnClickListener(this);
         initStatusBar();
-    }
 
-    @Override
-    protected void setStatusBar() {
-        TitleBarView titleBarView = findViewById(R.id.title_bar_view);
-        titleBarView.setStatusBar(this);
-    }
-
-    @Override
-    public void initData() {
         logo = BitmapFactory.decodeResource(getResources(), R.mipmap.huaji);
     }
 
-    @Override
-    public void initView() {
 
-    }
-
-    @Override
-    public void initFinish() {
-
-    }
 
     @Override
     public void onClick(View v) {

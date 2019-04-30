@@ -25,15 +25,6 @@ public class MyStyleScanActivity extends BaseActivity {
     }
 
     @Override
-    public void findView() {
-        CaptureFragment captureFragment = new CaptureFragment();
-        CodeUtils.setFragmentArgs(captureFragment, R.layout.my_style_scan_view);
-        captureFragment.setAnalyzeCallback(analyzeCallback);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fl_zxing_container, captureFragment).commit();
-        initStatusBar();
-    }
-
-    @Override
     protected void setStatusBar() {
         TitleBarView titleBarView = findViewById(R.id.title_bar_view);
         titleBarView.setStatusBar(this);
@@ -50,19 +41,15 @@ public class MyStyleScanActivity extends BaseActivity {
     }
 
     @Override
-    public void initData() {
-
+    public void initSurface() {
+        CaptureFragment captureFragment = new CaptureFragment();
+        CodeUtils.setFragmentArgs(captureFragment, R.layout.my_style_scan_view);
+        captureFragment.setAnalyzeCallback(analyzeCallback);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fl_zxing_container, captureFragment).commit();
+        initStatusBar();
     }
 
-    @Override
-    public void initView() {
 
-    }
-
-    @Override
-    public void initFinish() {
-
-    }
 
     @Override
     public void onClick(View v) {
